@@ -4,7 +4,7 @@ export default function Card() {
     return (
         <div className="card">
             <div className="product__section">
-                <img src="./src/sweaters/rosa-fram.jpeg" alt="pink sweater" className="sweaters" />
+                <img src="/src/Images/rosa-fram.jpeg" alt="pink sweater" className="sweaters" />
                 <div className="product__size">
                                 <p><strong>SIZE</strong></p>
                                 <p><small>M / L / XL</small></p>

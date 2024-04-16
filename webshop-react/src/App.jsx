@@ -1,12 +1,13 @@
 import './App.css'
-import Card from './components/card'
+import Header from './components/Header/header.jsx'
+import Footer from './components/Footer/footer.jsx'
 
 
 function App() {
   return (  
    <>
-   <h1>HOME PAGE!</h1>
-   <Card />
+   <Header />
+   <Footer />
    </>
   )
 }
