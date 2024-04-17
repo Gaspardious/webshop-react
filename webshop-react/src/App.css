@@ -18,9 +18,17 @@
     position: relative;
 }
 
-.cards-list {
+.main {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.cards-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 50px 0px;
+
 }
 
 .sweaters {
@@ -34,7 +42,7 @@
         top: 14px;
         left: 14px;
         border: none;
-        background-color: lightgray;
+        background-color: lightgrey;
         color: white;
         padding: 5px 7px;
         border-radius: 2px;

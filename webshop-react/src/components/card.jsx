@@ -7,8 +7,6 @@ console.log (props)
     } else if (props.inventory <= 3)
         badgeText = "FEW LEFT"
 
-
-
     return (
         <div className="card">
             {badgeText && <div className="product__badge">{badgeText}</div>}
