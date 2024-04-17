@@ -1,12 +1,8 @@
-* {
-    color: white;
-}
 
 nav {
     display: flex;
     list-style-type: none;
     gap: 1rem;
-
     justify-content: center;
 }
 
@@ -16,5 +12,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+li {
+    color: white;
 }
 
