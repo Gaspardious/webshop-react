@@ -1,8 +1,17 @@
 
 export default function Card(props) {
+console.log (props)
+    let badgeText
+    if (props.inventory === 0) {
+        badgeText = "SOLD OUT"
+    } else if (props.inventory <= 3)
+        badgeText = "FEW LEFT"
+
+
 
     return (
         <div className="card">
+            {badgeText && <div className="product__badge">{badgeText}</div>}
             <div className="product__section">
                 <img src={`../src/Images/${props.img}`}  className="sweaters" />
                 <div className="product__size">
