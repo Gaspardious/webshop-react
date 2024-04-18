@@ -1,10 +1,12 @@
 
 import './header.css'
+import Logo from '../Logo/logo'
 
 export default function Header (){
 return (
     <>
     <header>
+    <Logo />
         <nav>
             <li>HOME</li>
             <li>PRODUCTS</li>

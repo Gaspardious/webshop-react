@@ -4,13 +4,14 @@ nav {
     list-style-type: none;
     gap: 1rem;
     justify-content: center;
+    padding-right: 30px;
 }
 
 header {
     background-color: lightgray;
     height: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
