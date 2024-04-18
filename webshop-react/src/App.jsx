@@ -4,6 +4,7 @@ import Footer from './components/Footer/footer.jsx'
 import Products from './pages/Products/products.jsx'
 
 
+
 function App() {
   return (  
     <>
