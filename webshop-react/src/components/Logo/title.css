@@ -1,0 +1,14 @@
+
+.state__value {
+    display: flex;
+}
+
+.state__value:hover {
+cursor: pointer;
+}
+
+.state__value > h1 {
+    padding: 5px;
+    color: white;
+}
+

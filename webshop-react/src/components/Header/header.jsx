@@ -1,12 +1,13 @@
 
 import './header.css'
-import Logo from '../Logo/logo'
+import Title from '../Logo/title'
 
 export default function Header (){
 return (
     <>
     <header>
-    <Logo />
+    <img src="/src/Images/logo.jpg" alt="" className='logo' />
+    <Title />
         <nav>
             <li>HOME</li>
             <li>PRODUCTS</li>
