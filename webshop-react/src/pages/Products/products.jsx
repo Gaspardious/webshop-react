@@ -1,7 +1,4 @@
-
-import Header from "../../components/Header/header"
-import Footer from "../../components/Footer/footer"
-import Card from "../../components/card"
+import Card from "../../components/Card/card"
 import data from "../../data"
 
 

@@ -1,6 +1,7 @@
 
 import './header.css'
-import Title from '../Logo/title'
+import Title from '../Title/title'
+import { Link } from 'react-router-dom'
 
 export default function Header (){
 return (
@@ -9,31 +10,12 @@ return (
     <img src="/src/Images/logo.jpg" alt="" className='logo' />
     <Title />
         <nav>
-            <li>HOME</li>
-            <li>PRODUCTS</li>
-            <li>ABOUT</li>
+            <ul>
+                <li><Link to="/">HOME</Link></li>
+                <li><Link to="/products">PRODUCTS</Link></li>
+                <li><Link to="/about">ABOUT</Link></li>
+            </ul>
         </nav>
     </header>
 </>
 )}
-
-
-
-/* 
-function greeting(name) {
-    const date = new Date()
-    const hours = date.getHours()
-    
-    let timeOfDay
-    if(hours >= 4 && hours < 12) {
-        timeOfDay = "morning"
-    } else if(hours >= 12 && hours < 17) {
-        timeOfDay = "afternoon"
-    } else if(hours >= 17 && hours < 20) {
-        timeOfDay = "evening"
-    } else {
-        timeOfDay = "night"
-    }
-    
-    return `Good ${timeOfDay}, ${name}!`
-} */
