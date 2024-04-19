@@ -1,12 +1,13 @@
-import Card from "../../components/Card/card"
+import Product from "../../components/Product/product";
 import data from "../../data"
-import './products.css'
+import './productpage.css'
 
 
-export default function Products () {
+
+export default function Productpage () {
             const cards = data.map(item => {
                 return (
-                    <Card 
+                    <Product 
                     /* item={item} går även att ta bort "...item" nedan och erätta med item={item}. Då måste .item läggas till i card efter alla props. */
                     {...item} /* detta skapar en array/object utan att skriva ut allt = https://www.w3schools.com/react/react_es6_spread.asp */
                     />
@@ -15,12 +16,11 @@ export default function Products () {
             
             return (
                 <>
-                    <div className="main">
-                        <div className="cards-list">
+                    <div className="productpage__main">
+                        <div className="productpage">
                             {cards}
                         </div>
                     </div>
                 </>
             )
         }
-

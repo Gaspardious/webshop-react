@@ -1,18 +1,11 @@
 
-import './card.css'
+import './product.css'
+
 import React, { useState } from 'react';
 
 
-export default function Card(props) {
+export default function Product(props) {
     const[isHovered, setIsHovered] = useState(false)
-
-    function mouseEnter (){
-        setIsHovered(true);
-    }
-
-    function mouseLeave (){
-        setIsHovered(false);
-    }
 
     let badgeText
     if (props.inventory === 0) {
@@ -24,7 +17,7 @@ export default function Card(props) {
         <div className="card">
             {badgeText && <div className="product__badge">{badgeText}</div>}
             <div className="product__section">
-                <img src={`../src/Images/${props.img}`} className={isHovered ? "sweaters shrink" : "sweaters"} onMouseEnter={mouseEnter}  onMouseLeave={mouseLeave} />
+                <img src={`../src/Images/${props.img}`} className="sweaters"/>
                 <div className="product__size">
                                 <p><strong>SIZE</strong></p>
                                 <p><small>M / L / XL</small></p>

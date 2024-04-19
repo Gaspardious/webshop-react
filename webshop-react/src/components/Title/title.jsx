@@ -11,7 +11,7 @@ export default function Title () {
     return (
         <div className="state">
             <div className="state__value" onClick={Switch}>
-                <h1> {isGoingOut ? "NICE" : "COOL"} SWEATER</h1>
+                <h1> {isGoingOut ? "KNITTED" : "STICKY"} SWEATER</h1>
             </div>
         </div>
     )

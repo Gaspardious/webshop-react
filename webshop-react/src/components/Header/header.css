@@ -1,6 +1,6 @@
 
 header {
-    background-color: lightgray;
+    background: linear-gradient(90deg, white 15%, rgb(168, 168, 168));
     height: 80px;
     display: flex;
     justify-content: space-around;
@@ -16,6 +16,8 @@ ul {
 a {
     text-decoration: none;;
     color: white;
+    font-family: 'Segoe UI', Tahoma;
+    font-weight: 600;
 }
 
 
