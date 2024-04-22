@@ -1,0 +1,30 @@
+
+header {
+    background: linear-gradient(90deg, white 15%, rgb(168, 168, 168));
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+a {
+    text-decoration: none;;
+    color: white;
+    font-family: 'Segoe UI', Tahoma;
+    font-weight: 600;
+}
+
+
+.logo {
+    width: 60px;
+    border-radius: 15px;
+    box-shadow: -5px -3px 2px 2px rgb(199, 199, 199);
+
+}
+

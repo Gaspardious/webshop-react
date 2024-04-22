@@ -1,0 +1,26 @@
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, white 75%, rgb(168, 168, 168));
+}
+
+.hero__img {
+width: 620px;
+height: auto;
+}
+
+
+
+.hero__btn {
+background-color: lightgray;
+padding: 12px;
+border-radius: 10px;
+}
+
+h3 {
+    margin-bottom: 30px;
+}
+
