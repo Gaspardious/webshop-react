@@ -7,6 +7,7 @@ import Error from './pages/Error/error';
 import Products from "./pages/Products/products";
 import Homepage from "./pages/Homepage/homepage";
 import Productpage from "./pages/ProductPage/productpage";
+import Contact from "./pages/Contact/contact";
 
 
 const router = createBrowserRouter ([
@@ -18,7 +19,8 @@ const router = createBrowserRouter ([
   { path: '/', element: <Homepage />, index: true },
   { path: 'about', element: <About /> },
   { path: 'products', element: <Products /> },
-  { path: 'productpage', element: <Productpage /> }
+  { path: 'productpage', element: <Productpage /> },
+  { path: 'contact', element: <Contact /> }
 ]
 },
 ]);

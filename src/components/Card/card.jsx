@@ -1,5 +1,7 @@
 
+import Star from '../Star/star';
 import './card.css'
+
 import React, { useState } from 'react';
 
 
@@ -31,7 +33,12 @@ export default function Card(props) {
                 </div>
             </div>
 
-            <h1 className="product__company">STICKY SWEATER</h1>
+
+                <div className="star_">
+                    <h1 className="product__company">STICKY SWEATER</h1>
+                    <Star />
+                </div>
+
                 <div className="product__info">
                     <h1 className="product__name">{props.name}</h1>
                     <h2 className="product__price">{props.price} SEK</h2>      

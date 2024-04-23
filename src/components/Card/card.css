@@ -38,6 +38,12 @@
         z-index: 1;
 }
 
+.star_ {
+    display: flex;
+    width: 100%;
+}
+
+
 .product__info {
     display: flex;
     justify-content: center;
@@ -53,14 +59,6 @@
 .product__price {
     font-size: 14px;
     font-weight: 100;
-}
-
-.product__company {
-    font-size: 8px;
-    font-weight: 100;
-    letter-spacing: 0.5px;
-    padding: 5px 15px;
-    margin-right: auto;
 }
 
 .product__size {
