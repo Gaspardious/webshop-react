@@ -10,7 +10,7 @@ export default function Homepage () {
             <div className='hero__desc'>
                 <h1>SEE ALL PRODUCTS!</h1>
                 <h3>MADE IN SWEDEN!</h3>
-                <a href="../Products" className='hero__btn'>GO TO PRODUCTS</a>
+                <a href="../Products/" className='hero__btn'>GO TO PRODUCTS</a>
             </div>
         </div>
     </>
