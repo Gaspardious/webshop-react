@@ -1,4 +1,4 @@
-import './title.css'
+/* import './title.css'
 import React, { useState } from 'react'; 
 
 export default function Title () {
@@ -16,3 +16,4 @@ export default function Title () {
         </div>
     )
 }
+ */

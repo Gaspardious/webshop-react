@@ -1,6 +1,6 @@
 
 import './header.css'
-import Title from '../Title/title'
+/* import Title from '../Title/title' */
 import { Link } from 'react-router-dom'
 
 export default function Header (){
@@ -8,7 +8,7 @@ export default function Header (){
         <>
             <header>
                 <img src="/Images/logo.jpg" alt="" className='logo' />
-                <Title />
+  {/*               <Title /> */}
                     <nav>
                         <ul>
                             <li><Link to="/">HOME</Link></li>
