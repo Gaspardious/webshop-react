@@ -7,7 +7,7 @@ export default function Header (){
     return (
         <>
             <header>
-                <img src="/src/Images/logo.jpg" alt="" className='logo' />
+                <img src="/Images/logo.jpg" alt="" className='logo' />
                 <Title />
                     <nav>
                         <ul>

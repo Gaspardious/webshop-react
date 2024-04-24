@@ -1,8 +1,8 @@
 
 import './star.css'
 import React, { useState } from 'react';
-import starEmpty from '../../Images/star-empty.png';
-import starFilled from '../../Images/star-filled.png';
+const starEmpty = "/Images/star-empty.png"
+const starFilled = "/Images/star-filled.png"
 
 const Star = () => {
     const [contact, setContact] = useState({ isFavorite: false });

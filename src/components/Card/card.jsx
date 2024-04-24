@@ -26,7 +26,7 @@ export default function Card(props) {
         <div className="card">
             {badgeText && <div className="product__badge">{badgeText}</div>}
             <div className="product__section">
-                <img src={`../src/Images/${props.img}`} className={isHovered ? "sweaters shrink" : "sweaters"} onMouseEnter={mouseEnter}  onMouseLeave={mouseLeave} />
+                <img src={`../Images/${props.img}`} className={isHovered ? "sweaters shrink" : "sweaters"} onMouseEnter={mouseEnter}  onMouseLeave={mouseLeave} />
                 <div className="product__size">
                                 <p><strong>SIZE</strong></p>
                                 <p><small>M / L / XL</small></p>
