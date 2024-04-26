@@ -28,8 +28,8 @@ a {
 }
 
 @media screen and (max-width: 500px) {
-    nav {
-        display: none;
+    nav > ul > li > a {
+        font-size: 12px;
         
     }
 
