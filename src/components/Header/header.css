@@ -25,6 +25,14 @@ a {
     width: 60px;
     border-radius: 15px;
     box-shadow: -5px -3px 2px 2px rgb(199, 199, 199);
-
 }
+
+@media screen and (max-width: 500px) {
+    nav {
+        display: none;
+        
+    }
+
+
+  }
 

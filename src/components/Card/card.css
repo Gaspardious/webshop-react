@@ -13,7 +13,7 @@
 }
 
 .sweaters {
-    width: 300px;
+    max-width: 300px;
     padding: 10px 10px 0px 10px;
     border-radius: 15px;
     transition: transform 0.3s ease-in-out;
@@ -40,7 +40,14 @@
 
 .star_ {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+}
+
+.product__company {
+    font-size: 8px;
+    padding-left: 10px;
 }
 
 
@@ -54,8 +61,8 @@
 .product__name {
     font-size: 20px;
     padding: 5px;
-  
 }
+
 .product__price {
     font-size: 14px;
     font-weight: 100;
