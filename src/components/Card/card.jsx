@@ -1,6 +1,6 @@
 
 import Star from '../Star/star';
-import './card.css'
+import styles from './card.module.css'
 
 import React, { useState } from 'react';
 
@@ -23,27 +23,29 @@ export default function Card(props) {
         badgeText = "FEW LEFT"
 
     return (
-        <div className="card">
-            {badgeText && <div className="product__badge">{badgeText}</div>}
-            <div className="product__section">
-                <img src={`../Images/${props.img}`} className={isHovered ? "sweaters shrink" : "sweaters"} onMouseEnter={mouseEnter}  onMouseLeave={mouseLeave} />
-                <div className="product__size">
+        <div className={styles.card}>
+            {badgeText && <div className={styles.product__badge}>{badgeText}</div>}
+            <div className={styles.product__section}>
+            <img src={`../Images/${props.img}`} className={isHovered ? `${styles.sweaters} ${styles.shrink}` : styles.sweaters}         
+            onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} />
+
+                <div className={styles.product__size}>
                                 <p><strong>SIZE</strong></p>
                                 <p><small>M / L / XL</small></p>
                 </div>
             </div>
 
 
-                <div className="star_">
-                    <h1 className="product__company">STICKY SWEATER</h1>
+                <div className={styles.star}>
+                    <h1 className={styles.product__company}>STICKY SWEATER</h1>
                     <Star />
                 </div>
 
-                <div className="product__info">
-                    <h1 className="product__name">{props.name}</h1>
-                    <h2 className="product__price">{props.price} SEK</h2>      
+                <div className={styles.product__info}>
+                    <h1 className={styles.product__name}>{props.name}</h1>
+                    <h2 className={styles.product__price}>{props.price} SEK</h2>      
                 </div>
-            <button className="product__button">BUY</button>
+            <button className={styles.product__button}>BUY</button>
         </div>
     );
 }

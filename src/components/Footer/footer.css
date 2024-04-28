@@ -12,7 +12,7 @@ footer {
 
 }
 
-footer > p {
+footer >div > p {
     color: black;
     font-size: x-small;
 }

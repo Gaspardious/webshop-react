@@ -1,5 +1,5 @@
 
-import './star.css'
+import styles from './star.module.css'  
 import React, { useState } from 'react';
 const starEmpty = "/Images/star-empty.png"
 const starFilled = "/Images/star-filled.png"
@@ -19,7 +19,7 @@ const Star = () => {
     return (
         <>
             <img 
-                src={starIcon} className="star"
+                src={starIcon} className={styles.star}
                 alt={contact.isFavorite ? "filled star" : "empty star"} 
                 onClick={toggleFavorite} 
             />
