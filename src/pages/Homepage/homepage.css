@@ -49,6 +49,8 @@ height: auto;
 background-color: lightgray;
 padding: 12px;
 border-radius: 10px;
+list-style-type: none;
+width: 150px;
 }
 
 

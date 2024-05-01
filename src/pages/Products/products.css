@@ -24,47 +24,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .card {
-        width: 200px;
-        height: 290px;
-        margin: 10px;
-     }
-     .sweaters {
-        width: 180px;
-     }
-     .product__name {
-        font-size: 10px;
-        padding: 0px;
-    }
-
-    .product__company {
-        font-size: 5px;
-        padding: 5px;
-    }
-    .product__button {
-        width: 100px;
-        height: 30px;
-    }
-    
-    .product__price {
-        font-size: 10px;
-        font-weight: 100;
-    }
-    .product__badge {
-        font-size: 5px;
-        font-weight: 200;
-    }
-
-    .product__size {
-        padding: 1px;
-        border-radius: 2px;
-        font-size: 5px;
-        width: 30px;
-        position: absolute;
-        top: 14px;
-        right: 14px;
-        border: 1px solid lightgray;
-    }
 
   }
 
