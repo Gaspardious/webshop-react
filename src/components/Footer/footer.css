@@ -1,7 +1,7 @@
 
 
 footer {
-    background: linear-gradient(90deg, white 15%, rgb(168, 168, 168));
+    background: rgb(168, 168, 168);
     height: 100px;
     bottom: 0;
     display: flex;
@@ -13,6 +13,6 @@ footer {
 }
 
 footer >div > p {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: x-small;
 }

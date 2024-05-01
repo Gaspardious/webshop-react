@@ -6,7 +6,7 @@ return (
     <>
         <footer>
             <div>
-            <p>© Dejan Gaspar 2024 - Very Cool Website</p>
+            <p>© Made by Dejan Gaspar - 2024</p>
             </div>
            
         </footer>

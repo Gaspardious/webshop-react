@@ -1,6 +1,6 @@
 
 header {
-    background: linear-gradient(90deg, white 15%, rgb(168, 168, 168));
+    background: rgb(168, 168, 168);
     height: 80px;
     display: flex;
     justify-content: space-around;
@@ -21,9 +21,7 @@ a {
 }
 
 .logo {
-    width: 60px;
-    border-radius: 15px;
-    box-shadow: -5px -3px 2px 2px rgb(199, 199, 199);
+    width: 80px;
 }
 
 @media screen and (max-width: 500px) {

@@ -7,7 +7,7 @@ export default function Header (){
     return (
         <>
             <header>
-                <img src="/Images/logo.jpg" alt="" className={styles.logo} />
+                <img src="/Images/logo.png" alt="" className={styles.logo} />
   {/*               <Title /> */}
                     <nav>
                         <ul>
