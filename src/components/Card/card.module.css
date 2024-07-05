@@ -106,7 +106,7 @@
         width: 180px;
      }
      .product__name {
-        font-size: 15px;
+        font-size: 13px;
         padding: 0px;
     }
 
@@ -122,7 +122,7 @@
     }
     
     .product__price {
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 100;
     }
     .product__badge {
