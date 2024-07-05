@@ -4,6 +4,7 @@ import './products.css'
 
 
 export default function Products () {
+    
             const cards = data.map(item => {
                 return (
                     <Card 
@@ -15,6 +16,7 @@ export default function Products () {
             
             return (
                 <>
+                <h2 className="cards_title">PRODUCTS</h2>
                     <div className="main">
                         <div className="cards-list">
                             {cards}

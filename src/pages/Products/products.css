@@ -8,7 +8,13 @@
 .cards-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 50px 0px;
+    margin: 20px 0px;
+}
+
+.cards_title {
+    font-size: 30px;
+    margin: 40px 0px 10px 0px;
+    text-align: center;
 }
 
 
