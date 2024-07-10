@@ -26,3 +26,9 @@ export default function Products () {
             )
         }
 
+
+        <section className={styles.book_section}>
+          {data.map((item) => (
+            <Bookcovers key={book.id} book={book} />
+          ))}
+        </section>

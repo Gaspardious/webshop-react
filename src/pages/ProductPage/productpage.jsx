@@ -1,12 +1,12 @@
 import styles from './productpage.module.css'
 import { Link } from 'react-router-dom'
-import React from 'react'
+
 
 const Productpage = ({ product }) => {
   return (
     <div className={styles.productpage}>
       <div className={styles.product_section}>
-        <Link to={`/book/${book.id}`}>
+        <Link to={`/product/${product.id}`}>
           <img src='/images/bookCover.jpg' alt={product.title} className={styles.books_img} />
         </Link>
         <h2 className={styles.books_title}>{product.title}</h2>
