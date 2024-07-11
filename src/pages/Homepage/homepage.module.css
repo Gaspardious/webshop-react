@@ -4,20 +4,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-@media screen and (max-width: 850px) {
-    .hero {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-    }
-  }
-
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 850px) {
     .hero {
         display: flex;
         align-items: center;
@@ -30,17 +22,14 @@
 
 .hero__img {
 width: 620px;
-height: auto;
 }
 
 
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 850px) {
     .hero__img {
-        width: 380px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        height: auto;
+        width: 420px;
+
     }
 }
 
