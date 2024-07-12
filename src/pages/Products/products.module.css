@@ -5,7 +5,7 @@
     align-items: center;
 }
 
-.cards-list {
+.cards_list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 20px 0px;
@@ -17,16 +17,21 @@
     text-align: center;
 }
 
+.product_desc {
+    font-size: 15px;
+    text-align: center;
+}
+
 
 @media screen and (max-width: 1050px) {
-    .cards-list {
+    .cards_list {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
   }
   
 @media screen and (max-width: 690px) {
-    .cards-list {
+    .cards_list {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }

@@ -1,11 +1,10 @@
-
 import Star from '../Star/star';
 import styles from './card.module.css'
-
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
-export default function Card(props) {
+const Card = ({product}) => {
     const[isHovered, setIsHovered] = useState(false)
 
     function mouseEnter (){
@@ -17,17 +16,19 @@ export default function Card(props) {
     }
 
     let badgeText
-    if (props.inventory === 0) {
+    if (product.inventory === 0) {
         badgeText = "SOLD OUT"
-    } else if (props.inventory <= 3)
+    } else if (product.inventory <= 3)
         badgeText = "FEW LEFT"
 
     return (
         <div className={styles.card}>
             {badgeText && <div className={styles.product__badge}>{badgeText}</div>}
             <div className={styles.product__section}>
-            <img src={`../Images/${props.img}`} className={isHovered ? `${styles.sweaters} ${styles.shrink}` : styles.sweaters}         
-            onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} />
+            <Link to={`/product/${product.id}`}>
+                <img src={`../Images/${product.img}`} className={isHovered ? `${styles.sweaters} ${styles.shrink}` : styles.sweaters}         
+                onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} />
+            </Link>
 
                 <div className={styles.product__size}>
                                 <p><strong>SIZE</strong></p>
@@ -42,10 +43,14 @@ export default function Card(props) {
                 </div>
 
                 <div className={styles.product__info}>
-                    <h1 className={styles.product__name}>{props.name}</h1>
-                    <h2 className={styles.product__price}>{props.price} SEK</h2>      
+                    <h1 className={styles.product__name}>{product.name}</h1>
+                    <h2 className={styles.product__price}>{product.price} SEK</h2>      
                 </div>
-            <button className={styles.product__button}>BUY</button>
+                <Link to={`/product/${product.id}`}>
+                    <button className={styles.product__button}>BUY</button>
+                </Link>
         </div>
     );
 }
+
+export default Card;

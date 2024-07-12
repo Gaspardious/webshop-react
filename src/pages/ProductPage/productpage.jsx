@@ -1,21 +1,38 @@
-import styles from './productpage.module.css'
-import { Link } from 'react-router-dom'
+import styles from './productpage.module.css';
+import productsDatabase from '../../data';
+import { useParams } from 'react-router-dom';
 
 
-const Productpage = ({ product }) => {
+function ProductPage() {
+  const { id } = useParams();
+  const product = productsDatabase.find((product) => product.id === id);
+
+  if (!product) {
+    return <h2>Product not found</h2>;
+  }
+
   return (
+    <>
     <div className={styles.productpage}>
-      <div className={styles.product_section}>
-        <Link to={`/product/${product.id}`}>
-          <img src='/images/bookCover.jpg' alt={product.title} className={styles.books_img} />
-        </Link>
-        <h2 className={styles.books_title}>{product.title}</h2>
-        <Link to={`/book/${product.id}`}>
-          <button className={styles.books_btn}>ORDER</button>
-        </Link>
-      </div>
+          <p className={styles.banner}>DESIGNED IN SWEDEN - MADE IN ITALY</p>
+            <div className={styles.product}>
+                <div>
+                    <img src={`../Images/${product.img}`} alt={product.title} className={styles.products_img} />
+                </div>
+                <div className={styles.product_info}>
+                  <h1>{product.name}</h1>
+                  <p>Price: {product.price} SEK </p>
+                  <div className={styles.products_desc}>
+                      <p> <strong>Description:</strong> {product.desc}</p>
+                      <p> <strong>Available sizes:</strong>  {product.size}</p>
+                      <p> <strong>Inventory:</strong>  {product.inventory}</p>
+                  </div>
+                  <button className={styles.buy_btn}>ORDER</button>
+                </div>
+            </div>
     </div>
+    </>
   );
 }
 
-export default Productpage
+export default ProductPage;
