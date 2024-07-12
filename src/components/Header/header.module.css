@@ -1,7 +1,7 @@
 
 header {
     background: rgb(168, 168, 168);
-    height: 80px;
+    height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -21,15 +21,19 @@ a {
 }
 
 .logo {
-    width: 80px;
+    width: 110px;
 }
 
 @media screen and (max-width: 500px) {
     nav > ul > li > a {
-        font-size: 12px;
+        font-size: 13px;
         
     }
 
+
+.logo {
+    width: 100px;
+}
 
   }
 
