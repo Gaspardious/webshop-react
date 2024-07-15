@@ -11,6 +11,14 @@
     z-index: 1000;
 }
 
+.hamburger_menu {
+    display: none;
+}
+
+.cart {
+    width: 40px;
+    padding: 0px;
+}
 
 ul {
     display: flex;
@@ -21,12 +29,12 @@ ul {
 a {
     text-decoration: none;
     color: white;
-    font-family: 'Segoe UI', Tahoma;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
 }
 
 .logo {
-    width: 120px;
+    width: 110px;
     transition: 0.4s;
 }
 
@@ -35,12 +43,23 @@ a {
         font-size: 13px;
     }
 
+    .logo {
+        width: 100px;
+        margin: 0;
+        padding-left: 70px;
+    }
 
-.logo {
-    width: 100px;
-}
+    .hamburger_menu {
+        display: block;
+        width: 20px;
+    }
+
+    .nav_ul {
+        display: none;
+    }
 
   }
+
 
 @media screen and (max-width: 412px) {
     nav > ul > li > a {
@@ -56,6 +75,17 @@ a {
 
     .logo {
         width: 90px;
+        margin: 0;
+        padding-left: 70px;
+    }
+
+
+    .hamburger_menu {
+        display: block;
+    }
+
+    .nav_ul {
+        display: none;
     }
 
   }
