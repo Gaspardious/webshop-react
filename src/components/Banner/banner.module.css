@@ -4,4 +4,13 @@
     padding: 5px;
     font-size: 11px;
     color: #ffffff;
+    transition: 0.4s;
+    border-top: 0.5px solid white;
+}
+
+.banner_section {
+    padding-top:100px;
+    transition: 0.4s;
+    width: 100%;
+    z-index: 1000;
 }

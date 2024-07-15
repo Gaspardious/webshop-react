@@ -1,11 +1,16 @@
 
-header {
+.header {
     background: rgb(168, 168, 168);
     height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    transition: 0.4s;
+    width: 100%;
+    z-index: 1000;
 }
+
 
 ul {
     display: flex;
@@ -14,20 +19,20 @@ ul {
 }
 
 a {
-    text-decoration: none;;
+    text-decoration: none;
     color: white;
     font-family: 'Segoe UI', Tahoma;
     font-weight: 600;
 }
 
 .logo {
-    width: 110px;
+    width: 120px;
+    transition: 0.4s;
 }
 
 @media screen and (max-width: 500px) {
     nav > ul > li > a {
         font-size: 13px;
-        
     }
 
 
