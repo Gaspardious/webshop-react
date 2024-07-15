@@ -17,8 +17,8 @@ const Breadcrumbs = () => {
     } else {
       breadcrumbTrail = (
         <>
-          <Link to="/" className={styles.breadcrumbs_link}>Home</Link> / 
-          <Link to="/products" className={styles.breadcrumbs_link}> Products</Link> / 
+          <Link to="/" className={styles.breadcrumbs_link}>Home / </Link>  
+          <Link to="/products" className={styles.breadcrumbs_link}> Products /</Link>  
           <Link to={`/product/${product.id}`} className={styles.breadcrumbs_link}> {product.name}</Link>
         </>
       );
@@ -26,7 +26,7 @@ const Breadcrumbs = () => {
   } else if (location.pathname === '/about') {
     breadcrumbTrail = (
       <>
-        <Link to="/" className={styles.breadcrumbs_link}>Home</Link> /  
+        <Link to="/" className={styles.breadcrumbs_link}>Home  /</Link> 
 
         <Link to="/about" className={styles.breadcrumbs_link}> About</Link>
       </>
@@ -34,14 +34,14 @@ const Breadcrumbs = () => {
   } else if (location.pathname === '/products') {
     breadcrumbTrail = (
       <>
-        <Link to="/" className={styles.breadcrumbs_link}>Home</Link> / 
+        <Link to="/" className={styles.breadcrumbs_link}>Home /</Link>  
         <Link to="/products" className={styles.breadcrumbs_link}> Products</Link>
       </>
     );
   } else if (location.pathname === '/contact') {
     breadcrumbTrail = (
       <>
-        <Link to="/" className={styles.breadcrumbs_link}>Home</Link> / 
+        <Link to="/" className={styles.breadcrumbs_link}>Home /</Link> 
         <Link to="/contact" className={styles.breadcrumbs_link}> Contact</Link>
       </>
     );

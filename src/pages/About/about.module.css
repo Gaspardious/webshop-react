@@ -13,14 +13,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: aqua;
     padding: 10px;
     background: linear-gradient(135deg, lightgray 85%, white);
     border-radius: 30px;
     max-width: 500px;
 }
 
-.about > .about__section > .about__title, .about__desc {
-color: white;
-padding: 15px;
+
+.about__title {
+    font-size: 30px;
+    margin: 40px 0px 10px 0px;
+    text-align: center;
+    color: var(--textColorTwo);
+    font-family: var(--titleFont);
+}
+
+.about__desc {
+    color: var(--textColorOne);
+    font-family: var(--bodyFont);
+    padding: 15px;
+
 }

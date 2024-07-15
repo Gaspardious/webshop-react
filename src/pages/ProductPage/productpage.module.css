@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .products_img {
@@ -12,8 +11,21 @@
     border: 1px solid rgb(235, 235, 235);
 }
 
+.product_name {
+    font-size: 50px;
+    font-family: var(--titleFont);
+    color: var(--textColorTwo);
+}
+
+.product_price {
+    font-size: 15px;
+    padding: 8px 0px;
+    font-family: var(--bodyFont);
+    color: var(--textColorTwo);
+}
+
 .product_info {
-padding: 20px;
+    padding: 20px;
 }
 
 .products_desc {
@@ -22,6 +34,9 @@ padding: 20px;
     border: 1px solid rgb(235, 235, 235);
     border-radius: 10px;
     margin: 20px 0px;
+    font-family: var(--bodyFont);
+    color: var(--textColorTwo);
+    max-width: 700px;
 }
 
 .buy_btn {
@@ -29,32 +44,30 @@ padding: 20px;
     border: 1px solid;
     width: 150px;
     height: 40px;
-    margin-top: 10px;
+    margin: 15px 0px;
     font-size: 17px;
     border-radius: 5px;
-    color: #ffffff;
+    color: var(--textColorOne);
 }
-
-
-
 
 .details {
     font-size: 13px;
-    min-height: 30px;
-    padding: 8px;
+    min-width: 700px;
+    padding: 8px 0px;
     cursor: pointer;
     margin-bottom: 50px;
-    gap: 10px;
 }
 
 .shipping {
     font-size: 13px;
-    min-height: 30px;
+    min-height: 20px;
     padding: 8px;
     background-color: rgb(247, 247, 247);
     cursor: pointer;
     border: 1px solid rgb(235, 235, 235);
     margin-bottom: 5px;
+    border-radius: 10px;
+    color: var(--textColorTwo);
 }
 
 ol {
@@ -65,24 +78,29 @@ ol {
 
 .returns {
     font-size: 13px;
-    min-height: 30px;
+    min-height: 20px;
     padding: 8px;
     background-color: rgb(247, 247, 247);
     cursor: pointer;
     border: 1px solid rgb(235, 235, 235);
+    border-radius: 10px;
+    color: var(--textColorTwo);
 }
 
 .reviews {
-background-color: rgb(244, 244, 244);
-padding: 20px;
-border: 1px solid rgb(235, 235, 235);
-margin-top: 50px;
+    background-color: rgb(244, 244, 244);
+    padding: 20px;
+    border: 1px solid rgb(235, 235, 235);
+    margin-top: 50px;
+    color: var(--textColorTwo);
 }
 
 .reviews_title {
-    font-size: 20px;
+    font-size: 25px;
     margin: 20px;
     text-align: center;
+    font-family: var(--titleFont);
+    color: var(--textColorTwo);
 }
 
 .review_btn {
@@ -94,26 +112,30 @@ margin-top: 50px;
     font-size: 17px;
     border-radius: 5px;
     color: #ffffff;
+    font-family: var(--bodyFont);
 
 }
 
 summary {
-    font-size: 20px;
     cursor: pointer;
-    font-weight: bold;
+    color: var(--textColorTwo);
+    font-family: var(--titleFont);
+    font-size: 15px;
 }
 
 .similar_products_title {
-    font-size: 18px;
+    font-size: 25px;
     margin: 20px;
     text-align: center;
+    font-family: var(--titleFont);
+    color: var(--textColorTwo);
 }   
 
 .similar_products_container {
-display: flex;
-white-space: nowrap;
-overflow: auto;
-background: white;
+    display: flex;
+    white-space: nowrap;
+    overflow: auto;
+    background: white;
 
 }
 
@@ -135,6 +157,10 @@ background: white;
         display: grid;
         grid-template-columns: 1fr 1fr;
 
+    }
+
+    .details     {
+        min-width: 90vw;
     }
     
 }

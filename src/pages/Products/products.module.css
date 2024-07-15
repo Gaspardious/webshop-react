@@ -15,11 +15,15 @@
     font-size: 30px;
     margin: 40px 0px 10px 0px;
     text-align: center;
+    color: var(--textColorTwo);
+    font-family: var(--titleFont);
 }
 
 .product_desc {
     font-size: 15px;
     text-align: center;
+    color: var(--textColorTwo);
+    font-family: var(--bodyFont);
 }
 
 

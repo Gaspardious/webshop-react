@@ -20,21 +20,20 @@ function ProductPage() {
                     <img src={`../Images/${product.img}`} alt={product.title} className={styles.products_img} />
                 </div>
                 <div className={styles.product_info}>
-                  <h1>{product.name}</h1>
-                  <p>Price: {product.price} SEK </p>
+                  <h1 className={styles.product_name}>{product.name}</h1>
+                  <p className={styles.product_price}>Price: {product.price} SEK </p>
                   <div className={styles.products_desc}>
                       <p> <strong>Description:</strong> {product.desc}</p>
                       <p> <strong>Available sizes:</strong>  {product.size}</p>
                       <p> <strong>Inventory:</strong>  {product.inventory}</p>
                   </div>
-                  <button className={styles.buy_btn}>ORDER</button>
-                </div>
-            </div>
 
-            <div className={styles.details}>
+                  <button className={styles.buy_btn}>ORDER</button>
+
+                  <div className={styles.details}>
               <div className={styles.shipping}>
                 <details>
-                <summary>Shipping</summary>
+                <summary>SHIPPING</summary>
                 <ol>
                   <li> - Free shipping on all orders over 500 SEK</li>
                   <li> - Estimated delivery time: 3-5 days</li>
@@ -45,7 +44,7 @@ function ProductPage() {
 
               <div className={styles.returns}>
                 <details>
-                <summary>Returns</summary>
+                <summary>RETURNS</summary>
                 <ol>
                   <li> - Free returns on all orders</li>
                   <li> - Return policy: 30 days</li>
@@ -53,6 +52,11 @@ function ProductPage() {
                 </details>
               </div>
             </div>
+
+                </div>
+            </div>
+
+            
 
 {            <div className={styles.similar_products}>
               <h2 className={styles.similar_products_title}>SIMILAR PRODUCTS</h2>

@@ -1,8 +1,8 @@
 
 
 footer {
-    background: rgb(168, 168, 168);
-    height: 100px;
+    background: var(--mainColor);
+    min-height: 100px;
     bottom: 0;
     display: flex;
     align-items: center;
@@ -12,16 +12,26 @@ footer {
 }
 
 footer >div > p {
-    color: rgb(255, 255, 255);
-    font-size: x-small;
+    color: var(--textColorOne);
+    font-family: var(bodyFont);
+    font-size: small;
     text-align: center;
 }
 
 .brandname {
-    color: rgb(255, 255, 255);
-    font-size: x-small;
+    color: var(--textColorOne);
+    font-family: var(--titleFont);  
+    font-size: 54px;
     font-weight: bold;
     text-align: center;
-    padding: 5px;
-    font-size: 17px;
+    padding: 5px 0px;
+}
+
+.nav_ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 40px 0px;
 }

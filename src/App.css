@@ -1,17 +1,20 @@
-* {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    color: darkgrey;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap');
-
-
 
 :root {
     --gray: rgb(80, 80, 80);
-    --orange: rgb(255, 111, 0);
-/*     --orange: rgb(74, 118, 194); */
+    --mainColor: rgb(168, 168, 168);
     --bg-color: #f4f4f4;
+    --textColorOne : white;
+    --textColorTwo : darkgrey;
+    --titleFont: 'Fjalla One', sans-serif;
+    --bodyFont: 'Nunito Sans', sans-serif;
 }
+
+* {
+    margin: 0;
+    font-family: 'fjalla one', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+
+

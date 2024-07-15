@@ -18,7 +18,15 @@
     max-width: 500px;
 }
 
-.contact > .contact__section > .contact__title, .contact__desc {
-color: white;
-padding: 15px;
+.contact__desc {
+    color: var(--textColorOne);
+    font-family: var(--bodyFont);
+    padding: 15px;
+}
+
+.contact__title {
+    font-size: 30px;
+    font-family: var(--titleFont);
+    color: var(--textColorTwo);
+    margin: 10px;
 }
