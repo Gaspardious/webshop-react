@@ -2,7 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
+
 
 .banner {
     background-color: rgb(205, 205, 205);
@@ -42,6 +44,89 @@ padding: 20px;
     color: #ffffff;
 }
 
+
+
+
+.details {
+    font-size: 13px;
+    min-height: 30px;
+    padding: 8px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    gap: 10px;
+}
+
+.shipping {
+    font-size: 13px;
+    min-height: 30px;
+    padding: 8px;
+    background-color: rgb(247, 247, 247);
+    cursor: pointer;
+    border: 1px solid rgb(235, 235, 235);
+    margin-bottom: 5px;
+}
+
+ol {
+    list-style-type: none;
+    margin: 0px;
+    padding: 8px 20px;
+}
+
+.returns {
+    font-size: 13px;
+    min-height: 30px;
+    padding: 8px;
+    background-color: rgb(247, 247, 247);
+    cursor: pointer;
+    border: 1px solid rgb(235, 235, 235);
+}
+
+.reviews {
+background-color: rgb(244, 244, 244);
+padding: 20px;
+border: 1px solid rgb(235, 235, 235);
+margin-top: 50px;
+}
+
+.reviews_title {
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.review_btn {
+    background-color: #b7dd9b;
+    border: 1px solid;
+    width: 150px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 17px;
+    border-radius: 5px;
+    color: #ffffff;
+
+}
+
+summary {
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.similar_products_title {
+    font-size: 18px;
+    margin: 20px;
+    text-align: center;
+}   
+
+.similar_products_container {
+display: flex;
+white-space: nowrap;
+overflow: auto;
+background: white;
+
+}
+
+
 @media screen and (max-width: 1000px) {
     .product {
         flex-direction: column;
@@ -55,6 +140,12 @@ padding: 20px;
     .products_desc {
         padding: 20px;
     }
+    .similar_products_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
     
 }
+
 

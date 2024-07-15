@@ -1,6 +1,7 @@
 import styles from './productpage.module.css';
 import productsDatabase from '../../data';
 import { useParams } from 'react-router-dom';
+import Card from '../../components/Card/card';
 
 
 function ProductPage() {
@@ -30,7 +31,48 @@ function ProductPage() {
                   <button className={styles.buy_btn}>ORDER</button>
                 </div>
             </div>
+
+            <div className={styles.details}>
+              <div className={styles.shipping}>
+                <details>
+                <summary>Shipping</summary>
+                <ol>
+                  <li> - Free shipping on all orders over 500 SEK</li>
+                  <li> - Estimated delivery time: 3-5 days</li>
+                  <li> - Return policy: 30 days</li>
+                </ol>
+                </details>
+              </div>
+
+              <div className={styles.returns}>
+                <details>
+                <summary>Returns</summary>
+                <ol>
+                  <li> - Free returns on all orders</li>
+                  <li> - Return policy: 30 days</li>
+                </ol>
+                </details>
+              </div>
+            </div>
+
+{            <div className={styles.similar_products}>
+              <h2 className={styles.similar_products_title}>SIMILAR PRODUCTS</h2>
+              <div className={styles.similar_products_container}>
+                {productsDatabase.map((product) => (
+                  <Card key={product.id} product={product} />
+                ))}
+              </div>
+            </div>}
+
+
+            <div className={styles.reviews}>
+              <h2 className={styles.reviews_title}>CUSTOMER REVIEWS</h2>
+              <p>There are no reviews yet</p>
+              <button className={styles.review_btn}>Add a review</button>
+
+            </div>
     </div>
+
     </>
   );
 }
