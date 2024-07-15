@@ -1,0 +1,10 @@
+.breadcrumbs_link {
+  color: #b5b5b5;
+  text-decoration: none;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.breadcrumbs {
+padding: 5px;
+}

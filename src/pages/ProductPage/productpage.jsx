@@ -15,7 +15,6 @@ function ProductPage() {
   return (
     <>
     <div className={styles.productpage}>
-          <p className={styles.banner}>DESIGNED IN SWEDEN - MADE IN ITALY</p>
             <div className={styles.product}>
                 <div>
                     <img src={`../Images/${product.img}`} alt={product.title} className={styles.products_img} />
