@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './header.module.css';
 
+
+
+
 export default function Header() {
   useEffect(() => {
     function handleScroll() {
@@ -12,10 +15,12 @@ export default function Header() {
         header.style.height = "70px";
         logo.style.width = "70px";
         header.style.background = "rgba(168, 168, 168)";
+
       } else {
         header.style.height = "100px";
         logo.style.width = "110px";
         header.style.background = "rgba(205, 205, 205)";
+
       }
     }
 
@@ -29,7 +34,7 @@ export default function Header() {
   return (
     <>
       <header className={styles.header}>
-      <img src="/Images/icons8-menu-30.svg" alt="menu" className={styles.hamburger_menu} />
+      <img src="/Images/icons8-menu-30.svg" alt="menu" className={styles.hamburger_menu}  />
         <Link to="/">
           <img src="/Images/logo.png" alt="" className={styles.logo} />
         </Link>

@@ -1,8 +1,17 @@
 * {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
     color: darkgrey;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap');
 
 
+
+:root {
+    --gray: rgb(80, 80, 80);
+    --orange: rgb(255, 111, 0);
+/*     --orange: rgb(74, 118, 194); */
+    --bg-color: #f4f4f4;
+}
