@@ -37,3 +37,21 @@ a {
 
   }
 
+@media screen and (max-width: 412px) {
+    nav > ul > li > a {
+        font-size: 11px;
+        
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        width: 90px;
+    }
+
+  }
+
