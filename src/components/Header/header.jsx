@@ -29,7 +29,7 @@ export default function Header() {
   return (
     <>
       <header className={styles.header}>
-      <img src="/public/Images/icons8-menu-30.svg" alt="menu" className={styles.hamburger_menu} />
+      <img src="/Images/icons8-menu-30.svg" alt="menu" className={styles.hamburger_menu} />
         <Link to="/">
           <img src="/Images/logo.png" alt="" className={styles.logo} />
         </Link>
@@ -41,7 +41,7 @@ export default function Header() {
             <li><Link to="/contact">CONTACT</Link></li>
           </ul>
         </nav>
-        <img src="/public/Images/icons8-cart-80.png" alt="cart" className={styles.cart} />
+        <img src="/Images/icons8-cart-80.png" alt="cart" className={styles.cart} />
       </header>
     </>
   );
