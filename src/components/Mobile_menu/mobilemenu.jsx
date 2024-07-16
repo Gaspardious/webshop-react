@@ -1,27 +1,29 @@
-import styles from './mobilemenu.module.css'
+import styles from './mobilemenu.module.css';
+import { Link } from 'react-router-dom';
 
-
-
-
-const Mobilemenu = () => {
+const Mobilemenu = ({ isMenuOpen, setMenuOpen }) => {
   return (
-<>
-    <div className={styles.overlay}>
-      <a href="javascript:void(0)" className={styles.closebtn} onClick="closeNav()">&times;</a>
-      <div className={styles.overlay_content}>
-        <nav>
-          <ul className={styles.nav_ul}>
-            <li><Link to="/">HOME</Link></li>
-            <li><Link to="/products">PRODUCTS</Link></li>
-            <li><Link to="/about">ABOUT</Link></li>
-            <li><Link to="/contact">CONTACT</Link></li>
-          </ul>
-        </nav>
+    <>
+      <div className={styles.mobileNav} 
+      style={{ width: isMenuOpen ? '60%' : '0' } }
+      onClick={() => setMenuOpen(false)}
+      >
+   
+        <ul>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link></li>
+          <li><Link to="/products" onClick={() => setMenuOpen(false)}>PRODUCTS</Link></li>
+          <li><Link to="/about" onClick={() => setMenuOpen(false)}>ABOUT</Link></li>
+          <li><Link to="/contact" onClick={() => setMenuOpen(false)}>CONTACT</Link></li>
+        </ul>
+        <img src="Images/logo.png" alt="logo in menu" className={styles.logo}  />
       </div>
-      <div className={styles.background_overlay}></div>
-    </div>
+      <div 
+        className={styles.overlay}
+        style={{ width: isMenuOpen ? '40%' : '0' }} 
+        onClick={() => setMenuOpen(false)}
+      />
     </>
-    )
-}
+  );
+};
 
-export default Mobilemenu
+export default Mobilemenu;

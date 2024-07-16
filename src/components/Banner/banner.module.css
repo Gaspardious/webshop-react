@@ -1,5 +1,5 @@
 .banner {
-    background-color: rgb(205, 205, 205);
+    background-color: var(--mainColor);
     text-align: center;
     padding: 5px;
     font-size: 11px;

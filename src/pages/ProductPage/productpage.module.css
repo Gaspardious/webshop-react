@@ -36,7 +36,7 @@
     margin: 20px 0px;
     font-family: var(--bodyFont);
     color: var(--textColorTwo);
-    max-width: 700px;
+    max-width: 500px;
 }
 
 .buy_btn {
@@ -52,7 +52,7 @@
 
 .details {
     font-size: 13px;
-    min-width: 700px;
+    max-width: 600px;
     padding: 8px 0px;
     cursor: pointer;
     margin-bottom: 50px;

@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './header.module.css';
-
-
-
+import Mobilemenu from '../Mobile_menu/mobilemenu';
 
 export default function Header() {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     function handleScroll() {
       const header = document.getElementsByClassName(styles.header)[0];
@@ -14,12 +14,12 @@ export default function Header() {
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         header.style.height = "70px";
         logo.style.width = "70px";
-        header.style.background = "rgba(168, 168, 168)";
+        header.style.background = "var(--mainColor)";
 
       } else {
         header.style.height = "100px";
         logo.style.width = "110px";
-        header.style.background = "rgba(205, 205, 205)";
+        header.style.background = "var(--mainColor)";
 
       }
     }
@@ -34,7 +34,12 @@ export default function Header() {
   return (
     <>
       <header className={styles.header}>
-      <img src="/Images/icons8-menu-30.svg" alt="menu" className={styles.hamburger_menu}  />
+      <Mobilemenu isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
+      <img src="/Images/icons8-menu-30.svg" 
+            alt="menu" 
+            className={styles.hamburger_menu}
+            onClick={() => setMenuOpen(!isMenuOpen)} 
+        />
         <Link to="/">
           <img src="/Images/logo.png" alt="" className={styles.logo} />
         </Link>

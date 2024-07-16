@@ -2,10 +2,10 @@
 
 :root {
     --gray: rgb(80, 80, 80);
-    --mainColor: rgb(168, 168, 168);
+    --mainColor: rgb(59, 59, 59);
     --bg-color: #f4f4f4;
     --textColorOne : white;
-    --textColorTwo : darkgrey;
+    --textColorTwo : rgb(59, 59, 59);
     --titleFont: 'Fjalla One', sans-serif;
     --bodyFont: 'Nunito Sans', sans-serif;
 }
