@@ -6,9 +6,23 @@
 
 .products_img {
     max-width: 600px;
-    margin: 30px;
+    margin: 30px 30px 0px 0px;
     border-radius: 10px;
     border: 1px solid rgb(235, 235, 235);
+}
+
+.gallary_img {
+    max-width: 100px;
+    border-radius: 10px;
+    border: 1px solid rgb(235, 235, 235);
+}
+
+.gallary {
+    padding: 0;
+    margin: 0px 0px 30px 0px;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
 }
 
 .product_name {

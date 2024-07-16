@@ -26,7 +26,7 @@ const Card = ({product}) => {
             {badgeText && <div className={styles.product__badge}>{badgeText}</div>}
             <div className={styles.product__section}>
             <Link to={`/product/${product.id}`}>
-                <img src={`../Images/${product.img}`} className={isHovered ? `${styles.sweaters} ${styles.shrink}` : styles.sweaters}         
+                <img src={`../Images/${product.img[0]}`} className={isHovered ? `${styles.sweaters} ${styles.shrink}` : styles.sweaters}         
                 onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} />
             </Link>
 

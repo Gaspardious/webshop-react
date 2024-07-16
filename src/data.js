@@ -3,7 +3,7 @@
 const productsDatabase = [
     {
         id: "1",
-        img:"rosa-fram.jpeg",
+        img: ["rosa-fram.jpeg", "glenn_back.png", "glenn_closeup.png", "glenn.png" ],
         name:"GLENN",
         price:"249",
         inventory: 0,
@@ -22,7 +22,7 @@ const productsDatabase = [
 
     {
         id: "2",
-        img:"svart-fram.jpeg",
+        img:["svart-fram.jpeg"],
         name:"GÖTA",
         price:"499",
         inventory: 3,
@@ -31,7 +31,7 @@ const productsDatabase = [
     },
     {
         id: "3",
-        img:"grå-fram.jpeg",
+        img:["grå-fram.jpeg"],
         name:"HJALMAR",
         price:"499",
         inventory: 5,
@@ -40,7 +40,7 @@ const productsDatabase = [
     },
     {
         id: "4",
-        img:"grön-fram.jpeg",
+        img:["grön-fram.jpeg"],
         name:"LINNÉ",
         price:"899",
         inventory: 3,
@@ -49,7 +49,7 @@ const productsDatabase = [
     },
     {
         id: "5",
-        img:"orange-fram.jpeg",
+        img:["orange-fram.jpeg"],
         name:"GUSTAV",
         price:"899",
         inventory: 10,

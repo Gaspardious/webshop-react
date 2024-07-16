@@ -16,8 +16,15 @@ function ProductPage() {
     <>
     <div className={styles.productpage}>
             <div className={styles.product}>
+      
                 <div>
-                    <img src={`../Images/${product.img}`} alt={product.title} className={styles.products_img} />
+                    <img src={`../Images/${product.img[0]}`} alt={product.title} className={styles.products_img} /> 
+                    <div className={styles.gallary}>
+                      <img src={`../Images/${product.img[0]}`} alt={product.title} className={styles.gallary_img} />
+                      <img src={`../Images/${product.img[1]}`} alt={product.title} className={styles.gallary_img} />
+                      <img src={`../Images/${product.img[2]}`} alt={product.title} className={styles.gallary_img} />
+                      <img src={`../Images/${product.img[3]}`} alt={product.title} className={styles.gallary_img} />
+                    </div>
                 </div>
                 <div className={styles.product_info}>
                   <h1 className={styles.product_name}>{product.name}</h1>
