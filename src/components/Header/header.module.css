@@ -13,6 +13,13 @@
 
 .hamburger_menu {
     display: none;
+    cursor: pointer;
+    transform: rotate(90deg);  
+    transition: 0.4s;  
+}
+
+.hamburger_menu:hover {
+    transform: rotate(0deg);
 }
 
 .cart {

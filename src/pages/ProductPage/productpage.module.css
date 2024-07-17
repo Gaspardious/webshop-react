@@ -10,13 +10,14 @@
     border: 1px solid rgb(235, 235, 235);
 }
 
+
 .product_img_badge {
     position: relative;
 }
 
 
 .gallery_img {
-    max-width: 80px;
+    max-width: 90px;
     border: 1px solid rgb(235, 235, 235);
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -26,6 +27,7 @@
 .gallary_section {
     display: flex;
     gap: 2px;
+    max-width: 408,6px;
 }
 
 .product_name {
@@ -214,4 +216,8 @@ summary {
     
 }
 
-
+@media screen and (max-width: 414px) {
+.gallery_img {
+    max-width: 64px;
+  }
+}
