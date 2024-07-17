@@ -15,15 +15,9 @@ const Card = ({product}) => {
         setIsHovered(false);
     }
 
-    let badgeText
-    if (product.inventory === 0) {
-        badgeText = "SOLD OUT"
-    } else if (product.inventory <= 3)
-        badgeText = "FEW LEFT"
 
     return (
         <div className={styles.card}>
-            {badgeText && <div className={styles.product__badge}>{badgeText}</div>}
             <div className={styles.product__section}>
             <Link to={`/product/${product.id}`}>
                 <img src={`../Images/${product.img[0]}`} className={isHovered ? `${styles.sweaters} ${styles.shrink}` : styles.sweaters}         

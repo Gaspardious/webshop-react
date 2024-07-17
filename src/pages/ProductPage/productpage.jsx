@@ -3,6 +3,7 @@ import productsDatabase from '../../data';
 import { useParams } from 'react-router-dom';
 import Card from '../../components/Card/card';
 import { useState, useEffect } from 'react';
+import Badge from '../../components/Badge/badge.jsx';
 
 function ProductPage() {
   const { id } = useParams();
@@ -28,11 +29,17 @@ function ProductPage() {
       <div className={styles.product}>
   
         <div className={styles.gallary}>
-        <img
-          src={`../Images/${currentImage}`}
-          alt={product.name}
-          className={styles.products_img}
-        />
+      
+        <div className={styles.product_img_badge}>
+          <img
+            src={`../Images/${currentImage}`}
+            alt={product.name}
+            className={styles.products_img}
+          />
+          <Badge inventory={product.inventory} />
+        </div>
+
+
           <div className={styles.gallary_section}>
           {product.img.map((image, index) => (
             <img
@@ -51,11 +58,19 @@ function ProductPage() {
           <p className={styles.product_price}>Price: {product.price} SEK</p>
           <div className={styles.products_desc}>
             <p><strong>Description:</strong> {product.desc}</p>
+            <br/>
             <p><strong>Available sizes:</strong> {product.size}</p>
-            <p><strong>Inventory:</strong> {product.inventory}</p>
           </div>
-          <button className={styles.buy_btn}>ORDER</button>
-
+          <div className={styles.btn_inventory}>
+            <div>
+              <button className={styles.buy_btn}>ORDER</button>
+              <p className={styles.below_btn_text}>FREE SHIPPING AND RETURNS!</p>
+            </div>
+            <div className={styles.inventory_section}>
+              <p><strong>Inventory:</strong></p>
+              <p>{product.inventory}</p>
+            </div>
+          </div>
 
           <div className={styles.details}>
             <div className={styles.shipping}>

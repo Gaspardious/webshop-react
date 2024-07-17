@@ -7,13 +7,16 @@
 .products_img {
     max-width: 600px;
     margin: 30px 0px 0px 0px;
-    border-radius: 10px;
     border: 1px solid rgb(235, 235, 235);
 }
 
+.product_img_badge {
+    position: relative;
+}
+
+
 .gallery_img {
-    max-width: 90px;
-    border-radius: 10px;
+    max-width: 80px;
     border: 1px solid rgb(235, 235, 235);
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -23,7 +26,6 @@
 .gallary_section {
     display: flex;
     gap: 2px;
-justify-content: center;
 }
 
 .product_name {
@@ -55,15 +57,42 @@ justify-content: center;
     max-width: 500px;
 }
 
+.inventory_section {
+    text-align: center;
+    font-size: 13px;
+    font-family: var(--bodyFont);
+    color: var(--textColorTwo);
+    background-color: rgb(244, 244, 244);
+    padding: 15px;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 10px;
+    margin: 10px 0px;
+
+}
+
+.btn_inventory {
+    display: flex;
+    justify-content: space-between;
+}
+
 .buy_btn {
     background-color: #b7dd9b;
     border: 1px solid;
     width: 150px;
     height: 40px;
-    margin: 15px 0px;
+    margin: 8px 0px;
     font-size: 17px;
     border-radius: 5px;
     color: var(--textColorOne);
+}
+
+.below_btn_text {
+    font-size: 9px;
+    color: var(--textColorTwo);
+    font-family: var(--bodyFont);
+    font-weight: 600;
+    padding: 5px 5px;
+    margin-bottom: 20px;
 }
 
 .details {
@@ -162,8 +191,8 @@ summary {
     }
 
     .products_img {
-        margin: 10px;   
-        max-width: 90vw;
+        margin: 0px;   
+        max-width: 95vw;
     }
 
     .products_desc {
