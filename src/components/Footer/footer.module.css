@@ -1,4 +1,8 @@
 
+.footer_section {
+    display: flex;
+    flex-direction: column;
+}
 
 footer {
     background: var(--mainColor);
@@ -8,23 +12,35 @@ footer {
     align-items: center;
     justify-content: center;
     border: none;
-
 }
 
 footer >div > p {
     color: var(--textColorOne);
     font-family: var(bodyFont);
-    font-size: small;
+    font-size: x-small;
     text-align: center;
+    padding-bottom: 15px;
+}
+
+.footer_logo {
+    padding: 0;
+    margin: 0;
+}
+
+.footer_ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
 }
 
 .brandname {
     color: var(--textColorOne);
     font-family: var(--titleFont);  
-    font-size: 54px;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
-    padding: 5px 0px;
+    padding: 0px;
 }
 
 .nav_ul {

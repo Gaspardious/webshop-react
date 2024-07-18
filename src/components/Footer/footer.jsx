@@ -9,14 +9,13 @@ return (
             <div className={styles.footer_section}>
 
 
-                <ul className={styles.nav_ul}>
-                    <li><Link to="/">HOME</Link></li>
-                    <li><Link to="/products">PRODUCTS</Link></li>
-                    <li><Link to="/about">ABOUT</Link></li>
-                    <li><Link to="/contact">CONTACT</Link></li>
+                <ul className={styles.footer_ul}>
+                    <img src="Images/ig_white.png" className={styles.footer_logo} alt="" />
+                    <img src="Images/fb_white.png" className={styles.footer_logo} alt="" />
                 </ul>
-                <p className={styles.footer}>© Made by Dejan Gaspar - 2024</p>
+       
                 <h2 className={styles.brandname}>STICKY SWEATER</h2>
+                <p className={styles.footer}>© Made by Dejan Gaspar - 2024</p>
              </div>
 
         </footer>
