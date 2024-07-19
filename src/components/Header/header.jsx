@@ -10,16 +10,20 @@ export default function Header() {
     function handleScroll() {
       const header = document.getElementsByClassName(styles.header)[0];
       const logo = document.getElementsByClassName(styles.logo)[0];
+      const navLinks = document.querySelectorAll(`.${styles.nav_ul} a`);
 
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         header.style.height = "70px";
         logo.style.width = "70px";
-        header.style.background = "var(--mainColor)";
+        header.style.background = "var(--bannerColor)";
 
+        
       } else {
         header.style.height = "100px";
         logo.style.width = "110px";
         header.style.background = "var(--mainColor)";
+        header.style.borderBottom = "0.5px solid white";
+
 
       }
     }

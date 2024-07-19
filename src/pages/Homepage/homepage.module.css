@@ -27,7 +27,7 @@ letter-spacing: 6px;
 
 }
 
-.hero__img {
+.slides {
 max-width: 620px;
 }
 
@@ -61,7 +61,7 @@ h3 {
         flex-direction: column;
     }
 
-    .hero__img {
+    .slides {
         width: 420px;
     }
 
