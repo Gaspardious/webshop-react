@@ -41,7 +41,7 @@ const Card = ({product}) => {
                     <h2 className={styles.product__price}>{product.price} SEK</h2>      
                 </div>
                 <Link to={`/product/${product.id}`}>
-                    <button className={styles.product__button}>BUY</button>
+                    <button className={styles.product__button}>ADD TO CART</button>
                 </Link>
         </div>
     );

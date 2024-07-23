@@ -25,6 +25,7 @@ footer >div > p {
 .footer_logo {
     padding: 0;
     margin: 0;
+    width: 25px;
 }
 
 .footer_ul {
