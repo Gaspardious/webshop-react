@@ -1,0 +1,68 @@
+/************** MOBILE MENU **************/
+
+.cart {
+    position: fixed;
+    width: 0;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background: linear-gradient(160deg, var(--mainColor) 5%, var(--mainColor) 95%);  
+    overflow: hidden; 
+    transition: width 0.3s ease; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-family: var(--titleFont);
+  }
+  
+ .close_btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-family: var(--titleFont);
+  }
+
+ .checkout_btn {
+    width: 100%;
+    padding: 10px 0;
+    background-color: black ;
+    color: #fff;
+    font-size: 0.7rem;
+    font-family: var(--bodyFont);
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .price {
+    color: #fff;
+    font-size: 0.8rem;
+    font-family: var(--bodyFont);
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .overlay {
+    position: fixed;
+    width: 0;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 100; 
+    transition: width 0.3s ease; 
+  }
+  

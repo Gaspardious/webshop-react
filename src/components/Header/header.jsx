@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './header.module.css';
 import Mobilemenu from '../Mobile_menu/mobilemenu';
+import Cart from '../Cart/cart';
 
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isCartOpen, setCartOpen] = useState(false);
 
   useEffect(() => {
     function handleScroll() {
@@ -55,7 +57,12 @@ export default function Header() {
             <li><Link to="/contact">CONTACT</Link></li>
           </ul>
         </nav>
-        <img src="/Images/icons8-cart-80.png" alt="cart" className={styles.cart} />
+        <Cart isCartOpen={isCartOpen} setCartOpen={setCartOpen} />
+        <img src="/Images/icons8-cart-80.png" 
+              alt="cart" 
+              className={styles.cart}
+              onClick={() => setCartOpen(!isCartOpen)}
+              />
       </header>
     </>
   );
