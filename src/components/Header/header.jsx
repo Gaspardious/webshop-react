@@ -16,13 +16,13 @@ export default function Header() {
 
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         header.style.height = "70px";
-        logo.style.width = "70px";
+        logo.style.fontSize = "28px";
         header.style.background = "var(--bannerColor)";
 
         
       } else {
         header.style.height = "100px";
-        logo.style.width = "110px";
+        logo.style.fontSize = "40px";
         header.style.background = "var(--mainColor)";
         header.style.borderBottom = "0.5px solid white";
 
@@ -42,7 +42,8 @@ export default function Header() {
       <header className={styles.header}>
 
       <Link to="/">
-          <img src="/Images/logo.png" alt="" className={styles.logo} />
+        {/*   <img src="/Images/logo.png" alt="" className={styles.logo} /> */}
+        <h1  className={styles.logo}>STICKY SWEATER</h1>
         </Link>
 
         <nav>

@@ -3,7 +3,7 @@
     background: var(--mainColor);
     height: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     transition: 0.4s;
@@ -27,6 +27,7 @@
 .symbols {
     display: flex;
     gap: 1.5rem;
+    padding-right: 20px;
 }
 
 ul {
@@ -44,8 +45,11 @@ a {
 }
 
 .logo {
-    width: 110px;
     transition: 0.4s;
+    font-family: var(--titleFont);
+    font-size: 20px;
+    width: 50px;
+    padding-left: 5px;
 }
 
 
@@ -56,11 +60,7 @@ a {
         font-size: 13px;
     }
 
-    .logo {
-        width: 100px;
-        margin: 0;
-        padding-left: 70px;
-    }
+
 
     .hamburger_menu {
         display: block;
