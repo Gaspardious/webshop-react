@@ -64,7 +64,7 @@ function ProductPage() {
           </div>
           <div className={styles.btn_inventory}>
             <div>
-              <button className={styles.buy_btn}>ORDER</button>
+              <button className={styles.buy_btn}>ADD TO CART</button>
               <p className={styles.below_btn_text}>FREE SHIPPING AND RETURNS!</p>
             </div>
             <div className={styles.inventory_section}>
