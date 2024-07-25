@@ -1,8 +1,8 @@
 
 import styles from './star.module.css'  
 import React, { useState } from 'react';
-const starEmpty = "/Images/star-empty.png"
-const starFilled = "/Images/star-filled.png"
+const starEmpty = "/Images/heart.png"
+const starFilled = "/Images/heart_filled.png"
 
 const Star = () => {
     const [contact, setContact] = useState({ isFavorite: false });

@@ -37,6 +37,7 @@ function ProductPage() {
             className={styles.products_img}
           />
           <Badge inventory={product.inventory} />
+
         </div>
 
 

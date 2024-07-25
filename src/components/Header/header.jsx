@@ -40,15 +40,11 @@ export default function Header() {
   return (
     <>
       <header className={styles.header}>
-      <Mobilemenu isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
-      <img src="/Images/icons8-menu-30.svg" 
-            alt="menu" 
-            className={styles.hamburger_menu}
-            onClick={() => setMenuOpen(!isMenuOpen)} 
-        />
-        <Link to="/">
+
+      <Link to="/">
           <img src="/Images/logo.png" alt="" className={styles.logo} />
         </Link>
+
         <nav>
           <ul className={styles.nav_ul}>
             <li><Link to="/">HOME</Link></li>
@@ -57,12 +53,28 @@ export default function Header() {
             <li><Link to="/contact">CONTACT</Link></li>
           </ul>
         </nav>
+
+<div className={styles.symbols}>
+        <img src="/Images/heart_white.png"       className={styles.heart} />
+
         <Cart isCartOpen={isCartOpen} setCartOpen={setCartOpen} />
         <img src="/Images/icons8-cart-80.png" 
               alt="cart" 
               className={styles.cart}
               onClick={() => setCartOpen(!isCartOpen)}
               />
+
+
+
+<Mobilemenu isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
+      <img src="/Images/icons8-menu-30.svg" 
+            alt="menu" 
+            className={styles.hamburger_menu}
+            onClick={() => setMenuOpen(!isMenuOpen)} 
+        />
+
+</div>
+
       </header>
     </>
   );
