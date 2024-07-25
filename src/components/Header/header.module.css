@@ -47,7 +47,6 @@ a {
 .logo {
     transition: 0.4s;
     font-family: var(--titleFont);
-    font-size: 20px;
     width: 50px;
     padding-left: 5px;
 }
