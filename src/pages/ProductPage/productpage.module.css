@@ -180,11 +180,14 @@ summary {
     color: var(--textColorTwo);
 }   
 
+
+
 .similar_products_container {
     display: flex;
     white-space: nowrap;
     overflow: auto;
     background: white;
+    margin: 0px 10px;
 
 }
 
