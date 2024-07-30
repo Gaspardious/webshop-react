@@ -9,6 +9,8 @@ import Homepage from "./pages/Homepage/homepage";
 import Contact from "./pages/Contact/contact";
 
 
+
+
 const router = createBrowserRouter ([
 {
   path: '/',
@@ -19,7 +21,10 @@ const router = createBrowserRouter ([
   { path: 'about', element: <About /> },
   { path: 'products', element: <Products /> },
   { path: 'contact', element: <Contact /> },
-  { path: 'product/:id', element: <ProductPage />}
+  { path: 'product/:id', element: <ProductPage />},
+
+
+
 ]
 },
 ]);

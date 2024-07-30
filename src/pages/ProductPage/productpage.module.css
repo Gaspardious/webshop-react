@@ -1,3 +1,5 @@
+
+
 .product {
     display: flex;
     align-items: center;
@@ -79,9 +81,9 @@
 }
 
 .buy_btn {
-    background-color: #8ecd61;
+    background-color: var(--mainColor);
     border: 1px solid;
-    width: 300px;
+    width: 280px;
     height: 50px;
     margin-top: 15px;
     font-size: 27px;
