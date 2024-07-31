@@ -6,12 +6,15 @@ return (
         <div className={styles.about}>
         <h1 className={styles.about__title}>ABOUT</h1>
             <section className={styles.about__section}>
-                <p className={styles.about__desc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-                    qui officia deserunt mollit anim id est laborum.
+                <p className={styles.about__desc}> Founded in 2018 by Dejan Gaspar.
                 </p>   
+                <p className={styles.about__desc}> Dejan started this brand to create a clothing line that he would wear himself. He drew inspiration from the 90s and 00s skateboarding and streetwear culture and combined it with his own personal style, creating a brand that is both nostalgic and modern.
+                </p>   
+                <p className={styles.about__desc}> Sticky Sweater is based in the Sweden and ship worldwide.
+                </p>   
+                <p className={styles.about__desc}> Peace!
+                </p>   
+                <img src="/Images/dejan.png"  alt="Picture of Dejan, the founder" className={styles.about_img} />
             </section>
         </div>
     </>
