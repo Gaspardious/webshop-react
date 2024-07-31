@@ -17,6 +17,11 @@
     text-align: center;
     color: var(--textColorTwo);
     font-family: var(--titleFont);
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .product_desc {
@@ -24,6 +29,11 @@
     text-align: center;
     color: var(--textColorTwo);
     font-family: var(--bodyFont);
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 

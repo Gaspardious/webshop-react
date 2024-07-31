@@ -12,6 +12,12 @@ footer {
     align-items: center;
     justify-content: center;
     border: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+                              
 }
 
 footer >div > p {
@@ -26,6 +32,7 @@ footer >div > p {
     padding: 0;
     margin: 0;
     width: 25px;
+    
 }
 
 .footer_ul {
@@ -42,6 +49,11 @@ footer >div > p {
     font-weight: bold;
     text-align: center;
     padding: 0px;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .nav_ul {

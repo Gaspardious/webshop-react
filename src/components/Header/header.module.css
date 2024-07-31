@@ -1,7 +1,7 @@
 
 .header {
     background: var(--mainColor);
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,18 +36,22 @@ ul {
     gap: 2.5rem;
 }
 
+
+
 a {
     text-decoration: none;
     color: white;
     font-family: var(--titleFont);
     font-size: 20px;
     font-weight: 800;
+    transition: 0.6s;
 }
 
 .logo {
-    transition: 0.4s;
+    transition: 0.6s;
     font-family: var(--titleFont);
     width: 50px;
+    font-size: 30px;
     padding-left: 5px;
 }
 

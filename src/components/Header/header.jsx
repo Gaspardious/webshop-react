@@ -15,16 +15,22 @@ export default function Header() {
       const navLinks = document.querySelectorAll(`.${styles.nav_ul} a`);
 
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        header.style.height = "70px";
-        logo.style.fontSize = "28px";
+        header.style.height = "45px";
+        logo.style.fontSize = "15px";
         header.style.background = "var(--mainColor)";
+        navLinks.forEach((link) => {
+          link.style.fontSize = "14px";
+        });
 
         
       } else {
-        header.style.height = "100px";
-        logo.style.fontSize = "40px";
+        header.style.height = "80px";
+        logo.style.fontSize = "30px";
         header.style.background = "var(--mainColor)";
         header.style.borderBottom = "0.5px solid white";
+        navLinks.forEach((link) => {
+          link.style.fontSize = "20px";
+        });
 
 
       }

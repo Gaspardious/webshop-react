@@ -37,12 +37,14 @@ const Card = ({product}) => {
                 </div>
 
                 <div className={styles.product__info}>
+                <Link to={`/product/${product.id}`}>
                     <h1 className={styles.product__name}>{product.name}</h1>
+                    </Link> 
                     <h2 className={styles.product__price}>{product.price} SEK</h2>      
                 </div>
-                <Link to={`/product/${product.id}`}>
+     {/*            <Link to={`/product/${product.id}`}>
                     <button className={styles.product__button}>ADD TO CART</button>
-                </Link>
+                </Link> */}
         </div>
     );
 }
