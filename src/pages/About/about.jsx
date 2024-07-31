@@ -10,7 +10,7 @@ return (
                 </p>   
                 <p className={styles.about__desc}> Dejan started this brand to create a clothing line that he would wear himself. He drew inspiration from the 90s and 00s skateboarding and streetwear culture and combined it with his own personal style, creating a brand that is both nostalgic and modern.
                 </p>   
-                <p className={styles.about__desc}> Sticky Sweater is based in the Sweden and ship worldwide.
+                <p className={styles.about__desc}> Sticky Sweater is based in the Sweden.
                 </p>   
                 <p className={styles.about__desc}> Peace!
                 </p>   

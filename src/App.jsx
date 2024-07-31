@@ -15,6 +15,7 @@ function App() {
       <Banner />
       <Breadcrumbs />
       <Outlet />
+
       <Footer />
     </>
   )

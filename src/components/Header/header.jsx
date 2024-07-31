@@ -17,7 +17,7 @@ export default function Header() {
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         header.style.height = "70px";
         logo.style.fontSize = "28px";
-        header.style.background = "var(--bannerColor)";
+        header.style.background = "var(--mainColor)";
 
         
       } else {
