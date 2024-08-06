@@ -10,6 +10,8 @@ function ProductPage() {
   const [product, setProduct] = useState(null);
   const [currentImage, setCurrentImage] = useState('');
 
+
+
   useEffect(() => {
     const foundProduct = productsDatabase.find((product) => product.id === id);
     if (foundProduct) {
