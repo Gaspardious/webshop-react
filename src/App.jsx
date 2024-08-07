@@ -8,15 +8,17 @@ import Banner from './components/Banner/banner.jsx'
 
 
 
+
 function App() {
   return (  
     <>
+
       <Header />
       <Banner />
       <Breadcrumbs />
       <Outlet />
-
       <Footer />
+
     </>
   )
 }

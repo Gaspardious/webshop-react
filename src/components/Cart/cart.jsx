@@ -1,7 +1,7 @@
 import styles from './cart.module.css'
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 
 import React from 'react'
@@ -9,7 +9,24 @@ import React from 'react'
 const Cart = ({ isCartOpen, setCartOpen, product }) => {
 const [quantity, setQuantity] = useState(1)
 const [size, setSize] = useState('M')
+/* const { id } = useParams();
+const [product, setProduct] = useState(null);
+const [currentImage, setCurrentImage] = useState('');
+ */
 
+/* useEffect(() => {
+  const foundProduct = productsDatabase.find((product) => product.id === id);
+  if (foundProduct) {
+    setProduct(foundProduct);
+    setCurrentImage(foundProduct.img[0]);
+  } else {
+    setProduct(null);
+  }
+}, [id]);
+
+if (!product) {
+  return <h2>Product not found</h2>;
+} */
 
   return (
     <>
