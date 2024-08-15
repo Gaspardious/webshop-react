@@ -83,11 +83,8 @@ h3 {
 
 .hero_image1, .hero_image2 {
     width: 50%;
-    border-radius: 5px;
     position: relative;
-    margin: 10px 5px 5px 5px;
-    
-    
+    margin-top: 5px;
 }
 
 .hero__image_btn1, .hero__image_btn2 {
@@ -149,7 +146,11 @@ h3 {
         }
             
         .hero_image_title {
-            font-size: 30px;
+            color: var(--textColorOne);
+            font-size: 25px;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
         }
 
         .hero__image_btn2 > a, .hero__image_btn1 > a {
@@ -160,4 +161,11 @@ h3 {
             width: 80px;
             padding: 1px;
             }
+
+            .banner > h2 {
+                font-family: var(--titleFont);
+                color: var(--textColorOne);
+                font-size: 15px;
+            }
+ 
 }
