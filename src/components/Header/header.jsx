@@ -15,8 +15,8 @@ export default function Header() {
       const navLinks = document.querySelectorAll(`.${styles.nav_ul} a`);
 
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        header.style.height = "55px";
-        logo.style.fontSize = "20px";
+        header.style.height = "45px";
+        logo.style.fontSize = "15px";
         header.style.background = "var(--mainColor)";
         navLinks.forEach((link) => {
           link.style.fontSize = "14px";
