@@ -107,48 +107,28 @@ h3 {
 
 
 .hero_images {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    margin: 5px;
+    overflow: hidden;
 }
 
-.hero_image1, .hero_image2 {
-    width: 50%;
+.hero_image1 {
+    width: 100%;
     position: relative;
-    margin-top: 5px;
-}
-
-.hero__image_btn1, .hero__image_btn2 {
-    background-color: var(--textColorOne);
-    padding: 8px;
-    border-radius: 10px;
-    list-style-type: none;
-    width: 110px;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-}
-
-.hero__image_btn2 {
-    right: 5%;
-}
-
-.hero__image_btn1 {
-    left: 5%;
-}
-
-.hero__image_btn2 > a, .hero__image_btn1 > a {
-    font-family: var(--titleFont);
-    font-size: 18px;    
-    color: var(--textColorTwo);;
+    cursor: pointer;
+    margin: 0px 0px;
+    padding: 0px;
+    line-height: 0;
 }
 
 .hero_image_title {
     color: var(--textColorOne);
-    font-size: 70px;
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     left: 20px;
+    font-family: var(--bodyFont);
 }
 
 .hero_lifestyle_img {
@@ -179,20 +159,11 @@ h3 {
             
         .hero_image_title {
             color: var(--textColorOne);
-            font-size: 25px;
+            font-size: 15px;
             position: absolute;
-            bottom: 5px;
-            left: 5px;
+            bottom: 20px;
+            left: 15px;
         }
-
-        .hero__image_btn2 > a, .hero__image_btn1 > a {
-            font-size: 12px;
-            }
-
-        .hero__image_btn1, .hero__image_btn2 {
-            width: 80px;
-            padding: 1px;
-            }
 
             .banner > h2 {
                 font-family: var(--titleFont);

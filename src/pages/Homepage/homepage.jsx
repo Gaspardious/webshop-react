@@ -41,20 +41,34 @@ export default function Homepage () {
 
         <div className={styles.hero_images}>
 
-        <section className={styles.hero_image2}>
-         <img className={styles.hero_lifestyle_img} src="/Images/glenn_closeup.png" alt="Black and White sweater lifestyle image" />  
-         <h2 className={styles.hero_image_title}>SALT N PEPPAR</h2>
-         <li className={styles.hero__image_btn1}><Link to="/product/3">SEE PRODUCT</Link></li>
-
+        <section className={styles.hero_image1} >
+            <Link to="/product/3">
+                <img className={styles.hero_lifestyle_img} src="/Images/hjalmar_lifestyle2.png" alt="Black and White sweater lifestyle image" />  
+                <h2 className={styles.hero_image_title}>SALT N PEPPAR</h2>
+            </Link>
          </section>
 
          <section className={styles.hero_image1}>
-            <img className={styles.hero_lifestyle_img} src="/Images/gota_closeup.png" alt="Black sweater lifestyle image" />  
-            <h2 className={styles.hero_image_title}>BLACK SWEATERS</h2>
-            
-            <li className={styles.hero__image_btn2}><Link to="/product/2">SEE PRODUCT</Link></li>
-
+            <Link to="/product/1">
+                <img className={styles.hero_lifestyle_img} src="/Images/glenn.png" alt="Black sweater lifestyle image" />  
+                <h2 className={styles.hero_image_title}> SWEATERS</h2>
+            </Link>
          </section>
+
+         <section className={styles.hero_image1}>
+            <Link to="/product/5">
+                <img className={styles.hero_lifestyle_img} src="/Images/gustav_lifestyle.png" alt="Black and White sweater lifestyle image" />  
+                <h2 className={styles.hero_image_title}>COPPER</h2>
+            </Link>
+         </section>
+
+         <section className={styles.hero_image1}>
+            <Link to="/product/2">
+                <img className={styles.hero_lifestyle_img} src="/Images/gota_lifestyle1.png" alt="Black sweater lifestyle image" />  
+                <h2 className={styles.hero_image_title}>BLACK SWEATERS</h2>
+            </Link>
+         </section>
+
         </div>
 
         <div className={styles.hero_products}>
