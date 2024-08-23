@@ -176,7 +176,7 @@ summary {
 
 .similar_products {
     background-color: rgba(239, 239, 239, 0.198);
-    padding: 20px;
+    padding: 0px;
     border: 1px solid rgb(235, 235, 235);
     margin-top: 50px;
     color: var(--textColorTwo);
@@ -226,12 +226,18 @@ summary {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+
 }
 
 
 @media screen and (max-width: 1000px) {
     .product {
         flex-direction: column;
+    }
+
+    .similar_products {
+        margin-top: 0px;
     }
 
     .products_img {
