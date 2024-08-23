@@ -17,9 +17,9 @@
 }
 
 .hero_title {
-color: var(--textColorTwo);
-font-family: var(--titleFont);
-font-size: 42.5px;
+    color: var(--textColorTwo);
+    font-family: var(--titleFont);
+    font-size: 42.5px;
 }
 
 .hero_undertitle {
@@ -27,7 +27,6 @@ color: var(--textColorTwo);
 font-family: var(--titleFont);
 font-size: 32.5px;
 letter-spacing: 6px;
-
 }
 
 .tag {
@@ -49,11 +48,41 @@ max-width: 620px;
     text-align: center;
     }
 
-.hero__btn > a {
-    font-family: var(--titleFont);
-    font-size: 18px;
-    color: var(--textColorOne);
+    .hero__btn > a {
+        font-family: var(--titleFont);
+        font-size: 18px;
+        color: var(--textColorOne);
+        }
+
+
+
+.btn {
+    background-color: var(--mainColor);
+    border-radius: 5px;
+    width: 110px;
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+
     }
+
+    .btn > a {
+        font-family: var(--titleFont);
+        font-size: 12px;
+        padding: 0px;
+        }
+
+
+
+.hero_products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
     
 h3 {
@@ -75,10 +104,12 @@ h3 {
     font-size: 20px;
 }
 
+
+
 .hero_images {
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 .hero_image1, .hero_image2 {
@@ -96,20 +127,21 @@ h3 {
     text-align: center;
     position: absolute;
     top: 50%;
-    }
+}
 
 .hero__image_btn2 {
     right: 5%;
-    }
+}
+
 .hero__image_btn1 {
     left: 5%;
-    }
+}
 
-    .hero__image_btn2 > a, .hero__image_btn1 > a {
-        font-family: var(--titleFont);
-        font-size: 18px;    
-        color: var(--textColorTwo);;
-        }
+.hero__image_btn2 > a, .hero__image_btn1 > a {
+    font-family: var(--titleFont);
+    font-size: 18px;    
+    color: var(--textColorTwo);;
+}
 
 .hero_image_title {
     color: var(--textColorOne);

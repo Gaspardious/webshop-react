@@ -3,7 +3,9 @@ import productsDatabase from "../../data.js"
 import styles from './products.module.css'
 
 
-export default function Products () {
+export default function Products ({ limit }) {
+
+  const limitProducts = productsDatabase.slice(0, limit);
     
     return (
         <>
@@ -11,7 +13,7 @@ export default function Products () {
           <p className={styles.product_desc}>Designed in Sweden - Made in Italy</p>
           <div className={styles.main}>
             <section className={styles.cards_list}>
-                {productsDatabase.map((product) => (
+                {limitProducts.map((product) => (
                 <Card key={product.id} product={product} />
                 ))}
             </section>

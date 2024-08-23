@@ -1,14 +1,16 @@
 import styles from './productpage.module.css';
 import productsDatabase from '../../data';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Card from '../../components/Card/card';
 import { useState, useEffect } from 'react';
 import Badge from '../../components/Badge/badge.jsx';
 
-function ProductPage() {
+
+function ProductPage({ limit }) {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [currentImage, setCurrentImage] = useState('');
+  const limitProducts = productsDatabase.slice(0, 4);
 
 
 
@@ -105,11 +107,13 @@ function ProductPage() {
       <div className={styles.similar_products}>
         <h2 className={styles.similar_products_title}>SIMILAR PRODUCTS</h2>
         <div className={styles.similar_products_container}>
-          {productsDatabase.map((product) => (
+          {limitProducts.map((product) => (
             <Card key={product.id} product={product} />
           ))}
         </div>
+        <a className={styles.btn}><Link to="/products">SEE ALL PRODUCTS</Link></a>
       </div>
+      
 
 
       <div className={styles.reviews}>
