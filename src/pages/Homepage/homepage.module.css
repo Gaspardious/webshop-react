@@ -178,7 +178,7 @@ h3 {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        height: 80vh;
+        height: 90vh;
     }
 
     .hero__btn_mobile {
@@ -224,10 +224,4 @@ h3 {
                 font-size: 15px;
             }
  
-}
-
-@media screen and (max-width: 375px) {
-    .hero {
-        height: 90vh;
-    }
 }
