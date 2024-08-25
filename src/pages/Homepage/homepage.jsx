@@ -26,14 +26,16 @@ export default function Homepage () {
     return (
     <>
        <div className={styles.hero}>
-            <img src={images[currentImage]} alt="" className={styles.slides} />
             <div className={styles.hero__desc}>
                 <h1 className={styles.hero_title}>STICKY SWEATER</h1>
                 <h2 className={styles.hero_undertitle}>GOTHENBURG</h2>
                 <h3 className={styles.tag}>DESIGNED IN SWEDEN - MADE IN ITALY</h3>
                 <li className={styles.hero__btn}><Link to="/products">GO TO PRODUCTS</Link></li>
             </div>
+            <img src={images[currentImage]} alt="" className={styles.slides} />
+            <li className={styles.hero__btn_mobile}><Link to="/products">GO TO PRODUCTS</Link></li>
         </div> 
+        
 
 <div className={styles.banner}>    
     <h2> STICKY SWEATER - BORN AND RAISED IN GOTHENBURG</h2>
@@ -51,7 +53,7 @@ export default function Homepage () {
          <section className={styles.hero_image1}>
             <Link to="/product/1">
                 <img className={styles.hero_lifestyle_img} src="/Images/glenn.png" alt="Black sweater lifestyle image" />  
-                <h2 className={styles.hero_image_title}> SWEATERS</h2>
+                <h2 className={styles.hero_image_title}> AUTUMN SWEATERS</h2>
             </Link>
          </section>
 

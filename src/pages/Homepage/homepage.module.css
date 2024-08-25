@@ -11,9 +11,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row-reverse;
     height: 90vh;
     margin: 0;
     padding: 0;
+}
+
+.hero__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+ 
 }
 
 .hero_title {
@@ -41,18 +51,40 @@ max-width: 620px;
 
 .hero__btn {
     background-color: var(--mainColor);
-    padding: 12px;
-    border-radius: 10px;
+    padding: 7px;
+    border-radius: 5px;
     list-style-type: none;
-    width: 130px;
+    width: 110px;
     text-align: center;
     }
 
     .hero__btn > a {
         font-family: var(--titleFont);
-        font-size: 18px;
+        font-size: 14px;
         color: var(--textColorOne);
         }
+
+
+.hero__btn_mobile {
+    background-color: var(--mainColor);
+    padding: 7px;
+    border-radius: 5px;
+    list-style-type: none;
+    width: 110px;
+    text-align: center;
+    display: none;
+    }
+
+    .hero__btn_mobile > a {
+        font-family: var(--titleFont);
+        font-size: 14px;
+        color: var(--textColorOne);
+        display: none;
+        }
+
+  
+
+
 
 
 
@@ -82,6 +114,9 @@ max-width: 620px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(246, 246, 246, 0.613);
 }
 
     
@@ -111,15 +146,13 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5px;
     margin: 5px;
-    overflow: hidden;
+
 }
 
 .hero_image1 {
     width: 100%;
     position: relative;
     cursor: pointer;
-    margin: 0px 0px;
-    padding: 0px;
     line-height: 0;
 }
 
@@ -144,13 +177,24 @@ h3 {
         flex-direction: column;
     }
 
+    .hero__btn_mobile {
+        display: block;
+    }
+
+    .hero__btn_mobile > a {
+        display: block;
+        }
+
+    .hero__btn {
+        display: none;
+    }
+
     .slides {
         width: 420px;
     }
 
     .hero__btn {
         margin: 0 auto;
-
         }
 
     .hero_undertitle, .tag {

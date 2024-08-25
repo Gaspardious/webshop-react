@@ -13,9 +13,9 @@
 }
 
 .sweaters {
-    max-width: 300px;
-    padding: 10px 10px 0px 10px;
-    border-radius: 15px;
+    max-width: 310px;
+    padding: 5px 5px 0px 5px;
+    border-radius: 10px 10px 0px 0px;
     transition: transform 0.3s ease-in-out;
     height: auto; /* Adjust height as necessary */
     -webkit-user-select: none;
