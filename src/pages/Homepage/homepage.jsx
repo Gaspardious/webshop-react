@@ -64,12 +64,14 @@ export default function Homepage () {
             </Link>
          </section>
 
+         <Link to="/product/2">
          <section className={styles.hero_image1}>
-            <Link to="/product/2">
                 <img className={styles.hero_lifestyle_img} src="/Images/gota_lifestyle1.png" alt="Black sweater lifestyle image" />  
-                <h2 className={styles.hero_image_title}>BLACK SWEATERS</h2>
-            </Link>
+                <h2 className={styles.hero_image_title}>BLACK SWEATER <img className={styles.hero_image_arrow} src="/Images/arrow.png" alt="" /> SHOP NOW </h2>
+              
+                <h2 className={styles.hero_image_title}></h2>
          </section>
+         </Link>
 
         </div>
 

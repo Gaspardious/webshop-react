@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: row-reverse;
-    height: 90vh;
+    height: 80vh;
     margin: 0;
     padding: 0;
 }
@@ -82,12 +82,6 @@ max-width: 620px;
         display: none;
         }
 
-  
-
-
-
-
-
 .btn {
     background-color: var(--mainColor);
     border-radius: 5px;
@@ -154,14 +148,23 @@ h3 {
     position: relative;
     cursor: pointer;
     line-height: 0;
+    display: flex;
 }
 
 .hero_image_title {
     color: var(--textColorOne);
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 15px;
+    left: 15px;
     font-family: var(--bodyFont);
+    font-size: 15px;
+    font-weight: 100;
+
+}
+
+.hero_image_arrow {
+    width: 17px;
+    margin: 5px 10px -2px 10px;
 }
 
 .hero_lifestyle_img {
@@ -175,6 +178,7 @@ h3 {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        height: 80vh;
     }
 
     .hero__btn_mobile {
@@ -203,10 +207,15 @@ h3 {
             
         .hero_image_title {
             color: var(--textColorOne);
-            font-size: 15px;
+            font-size: 11px;
             position: absolute;
-            bottom: 20px;
-            left: 15px;
+            bottom: 10px;
+            left: 5px;
+        }
+
+        .hero_image_arrow {
+            width: 14px;
+            margin: 0px 5px -2px 5px;
         }
 
             .banner > h2 {
@@ -215,4 +224,10 @@ h3 {
                 font-size: 15px;
             }
  
+}
+
+@media screen and (max-width: 375px) {
+    .hero {
+        height: 90vh;
+    }
 }
