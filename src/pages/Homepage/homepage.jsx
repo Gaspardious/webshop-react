@@ -76,7 +76,7 @@ export default function Homepage () {
         </div>
 
         <div className={styles.hero_products}>
-            <Products limit={4} />
+            <Products limit={3} />
             <a className={styles.btn}><Link to="/products">SEE ALL PRODUCTS</Link></a>
         </div>
 

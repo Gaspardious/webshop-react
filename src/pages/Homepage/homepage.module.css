@@ -157,14 +157,14 @@ h3 {
     bottom: 15px;
     left: 15px;
     font-family: var(--bodyFont);
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 100;
 
 }
 
 .hero_image_arrow {
-    width: 17px;
-    margin: 5px 10px -2px 10px;
+    width: 15px;
+    margin: 5px 6px -2px 6px;
 }
 
 .hero_lifestyle_img {
@@ -207,14 +207,14 @@ h3 {
             
         .hero_image_title {
             color: var(--textColorOne);
-            font-size: 11px;
+            font-size: 10px;
             position: absolute;
-            bottom: 10px;
+            bottom: 7.5px;
             left: 5px;
         }
 
         .hero_image_arrow {
-            width: 14px;
+            width: 12px;
             margin: 0px 5px -2px 5px;
         }
 

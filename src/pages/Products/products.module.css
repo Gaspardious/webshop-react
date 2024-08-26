@@ -6,9 +6,11 @@
 }
 
 .cards_list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 20px;
 }
 
 .cards_title {
@@ -39,17 +41,14 @@
 
 @media screen and (max-width: 1050px) {
     .cards_list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        margin: 20px 0px;
     }
   }
   
 @media screen and (max-width: 690px) {
     .cards_list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        margin: 20px 0px;
     }
-
   }
 
 
