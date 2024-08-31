@@ -13,7 +13,7 @@ const Banner = () => {
         <p className={styles.banner}>Follow us!</p>
       </div>
 
-      <p className={styles.banner}>DESIGNED IN SWEDEN - MADE IN ITALY</p>
+      <p className={styles.middle_banner}>FAST SHIPPING  -  30 DAYS FREE RETURNS</p>
 
       
       <div className={styles.banner_undersection2}>
