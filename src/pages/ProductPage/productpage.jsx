@@ -2,8 +2,9 @@ import styles from './productpage.module.css';
 import productsDatabase from '../../data';
 import { useParams, Link } from 'react-router-dom';
 import Card from '../../components/Card/card';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Badge from '../../components/Badge/badge.jsx';
+import { CartContext } from '../../components/Context/cartcontext.jsx'; //NY
 
 
 function ProductPage({ limit }) {
@@ -11,7 +12,8 @@ function ProductPage({ limit }) {
   const [product, setProduct] = useState(null);
   const [currentImage, setCurrentImage] = useState('');
   const limitProducts = productsDatabase.slice(0, 4);
-
+  const { addToCart } = useContext(CartContext); //NY
+ 
 
 
   useEffect(() => {
@@ -68,7 +70,14 @@ function ProductPage({ limit }) {
           </div>
           <div className={styles.btn_inventory}>
             <div>
-              <button className={styles.buy_btn}>ADD TO CART</button>
+
+              <button                             //NY
+                className={styles.buy_btn}
+                onClick={() => addToCart(product)}
+              >
+                ADD TO CART
+              </button>
+
               <p className={styles.below_btn_text}>FREE SHIPPING AND RETURNS!</p>
             </div>
             <div className={styles.inventory_section}>

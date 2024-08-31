@@ -1,7 +1,8 @@
 import styles from './cart.module.css'
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { CartContext } from '../../components/Context/cartcontext.jsx'; //NY
 
 
 import React from 'react'
@@ -9,48 +10,33 @@ import React from 'react'
 const Cart = ({ isCartOpen, setCartOpen, product }) => {
 const [quantity, setQuantity] = useState(1)
 const [size, setSize] = useState('M')
-/* const { id } = useParams();
-const [product, setProduct] = useState(null);
-const [currentImage, setCurrentImage] = useState('');
- */
-
-/* useEffect(() => {
-  const foundProduct = productsDatabase.find((product) => product.id === id);
-  if (foundProduct) {
-    setProduct(foundProduct);
-    setCurrentImage(foundProduct.img[0]);
-  } else {
-    setProduct(null);
-  }
-}, [id]);
-
-if (!product) {
-  return <h2>Product not found</h2>;
-} */
+const { cartItems } = useContext(CartContext); // Get cartItems from context
 
   return (
     <>
-      <div
-        className={`${styles.cart} ${isCartOpen ? styles.cartOpen : ''}`}
-       
-      >
-  
+      <div className={`${styles.cart} ${isCartOpen ? styles.cartOpen : ''}`}>
         <div className={styles.close_btn} onClick={() => setCartOpen(false)}>
             X
         </div>
 
-
         <h2>CART</h2>
+     
+    {cartItems.length === 0 ? (
+        <p>Your cart is empty</p>
+      ) : (
 
           <div className={styles.cart_items}>
-            <img src="/public/Images/glenn_front.png" alt="" className={styles.image}  onClick={() => setCartOpen(false)} />
-
-            <img  />
-
-            <div className={styles.info_container}>
+          {cartItems.map((item, index) => (                // Loop through cartItems and display them in the cart
+            <div key={index} className={styles.cart_item}>
+              <img 
+                src={`/Images/${item.img[0]}`} 
+                alt={item.name} 
+                className={styles.image} />
+                
+                      <div className={styles.info_container}>
               <section className={styles.name_price}>
-                <p>product.name</p>
-                <p>€ product.price </p>
+                <p>{item.name} </p>
+                <p> {item.price}  </p>
               </section>
               <section className={styles.quantity_size}>
                 
@@ -68,10 +54,14 @@ if (!product) {
                     <option className={styles.size_select} value="XL">XL</option>
                   </select>
                 </section>
-                
               </section>
               </div>
+
+            </div>
+          ) ) }
           </div>
+      )}
+
   
         <div className={styles.checkout} >
           <section className={styles.totalprice}>
