@@ -1,4 +1,5 @@
 import styles from './banner.module.css'
+import { Link } from 'react-router-dom'
 
 const Banner = () => {
   return (
@@ -14,10 +15,13 @@ const Banner = () => {
 
       <p className={styles.banner}>DESIGNED IN SWEDEN - MADE IN ITALY</p>
 
+      
       <div className={styles.banner_undersection2}>
-        <p className={styles.banner}>Get in touch with us!</p>
-        <img src="Images/email.png" className={styles.ig_logo} alt="" />
+        <Link to="/contact"> <p className={styles.banner}>Get in touch with us!</p></Link>
+        <Link to="/contact"> <img src="Images/email.png" className={styles.ig_logo} alt="" /></Link>
       </div>
+
+
     </div>
 
     </>

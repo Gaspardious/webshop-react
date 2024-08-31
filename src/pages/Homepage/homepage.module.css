@@ -46,7 +46,8 @@ letter-spacing: 6px;
 }
 
 .slides {
-max-width: 620px;
+max-width: 500px;
+z-index: -1;
 }
 
 .hero__btn {
