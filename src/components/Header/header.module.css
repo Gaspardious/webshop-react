@@ -44,22 +44,21 @@ a {
     font-family: var(--titleFont);
     font-size: 20px;
     font-weight: 800;
-    transition: 0.6s;
+    transition: 0.4s;
 }
 
 
 .logo1 {
-    transition: 0.6s;
+    transition: 0.4s;
     font-family: var(--titleFont);
     width: 50px;
     font-size: 15px;
     padding-left: 22px;
     letter-spacing: 8px;
-    margin-bottom: -3px;
 }
 
 .logo2 {
-    transition: 0.6s;
+    transition: 0.4s;
     font-family: var(--titleFont);
     width: 50px;
     font-size: 25px;
@@ -105,12 +104,6 @@ a {
         list-style-type: none;
         gap: 0.5rem;
     }
-
-    .logo {
-        width: 90px;
-        margin: 0;
-    }
-
 
     .hamburger_menu {
         display: block;
