@@ -42,7 +42,7 @@ a {
     text-decoration: none;
     color: var(--textColorOne);
     font-family: var(--titleFont);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 800;
     transition: 0.4s;
 }
@@ -52,7 +52,7 @@ a {
     transition: 0.4s;
     font-family: var(--titleFont);
     width: 50px;
-    font-size: 15px;
+    font-size: 9px;
     padding-left: 22px;
     letter-spacing: 8px;
 }
@@ -61,7 +61,7 @@ a {
     transition: 0.4s;
     font-family: var(--titleFont);
     width: 50px;
-    font-size: 25px;
+    font-size: 21px;
     padding-left: 20px;
 
 }

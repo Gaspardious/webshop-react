@@ -11,14 +11,10 @@ export default function Header() {
   useEffect(() => {
     function handleScroll() {
       const header = document.getElementsByClassName(styles.header)[0];
-      const logo1 = document.getElementsByClassName(styles.logo1)[0];
-      const logo2 = document.getElementsByClassName(styles.logo2)[0];
       const navLinks = document.querySelectorAll(`.${styles.nav_ul} a`);
 
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         header.style.height = "45px";
-        logo1.style.fontSize = "10px";
-        logo2.style.fontSize = "21px";
         header.style.background = "var(--mainColor)";
         navLinks.forEach((link) => {
           link.style.fontSize = "14px";
@@ -27,12 +23,10 @@ export default function Header() {
         
       } else {
         header.style.height = "60px";
-        logo1.style.fontSize = "15px";
-        logo2.style.fontSize = "25px";
         header.style.background = "var(--mainColor)";
         header.style.borderBottom = "0.5px solid white";
         navLinks.forEach((link) => {
-          link.style.fontSize = "20px";
+          link.style.fontSize = "18px";
         });
 
 
