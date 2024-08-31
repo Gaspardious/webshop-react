@@ -2,8 +2,9 @@
 
 :root {
     --gray: rgb(80, 80, 80);
-    --mainColor: rgb(66, 66, 65);
-    --bannerColor: rgb(137, 137, 137);
+    --mainColor: rgb(2, 126, 76);
+    --bannerColor: rgb(153, 183, 170);
+    --bgColorCard:rgb(227, 237, 233);
     --bg-color: #f4f4f4;
     --textColorOne : white;
     --textColorTwo : rgb(59, 59, 59);
