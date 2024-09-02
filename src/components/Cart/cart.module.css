@@ -97,7 +97,7 @@
   }
 
 
-  h2 {
+  .cart_title {
     color: var(--textColorTwo);
     font-size: 2rem;
     font-family: var(--titleFont);

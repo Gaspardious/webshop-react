@@ -20,7 +20,7 @@ const { cartItems } = useContext(CartContext); // Get cartItems from context
             <p>X</p>
         </div>
 
-        <h2>SHOPPING CART</h2>
+        <h2 className={styles.cart_title}>SHOPPING CART</h2>
       
      
     {cartItems.length === 0 ? (
