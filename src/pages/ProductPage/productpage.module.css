@@ -90,6 +90,14 @@
     border-radius: 5px;
     color: var(--textColorOne);
     font-family: var(--titleFont);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.buy_btn:hover {
+    background-color: var(--mainColorHover);
+    color: black;
+
 }
 
 .below_btn_text {

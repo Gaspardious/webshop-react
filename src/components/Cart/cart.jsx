@@ -5,6 +5,7 @@ import { useState, useEffect, useContext } from 'react';
 import { CartContext } from '../../components/Context/cartcontext.jsx'; //NY
 
 
+
 import React from 'react'
 
 const Cart = ({ isCartOpen, setCartOpen, product }) => {
@@ -16,13 +17,14 @@ const { cartItems } = useContext(CartContext); // Get cartItems from context
     <>
       <div className={`${styles.cart} ${isCartOpen ? styles.cartOpen : ''}`}>
         <div className={styles.close_btn} onClick={() => setCartOpen(false)}>
-            X
+            <p>X</p>
         </div>
 
-        <h2>CART</h2>
+        <h2>SHOPPING CART</h2>
+      
      
     {cartItems.length === 0 ? (
-        <p>Your cart is empty</p>
+        <p>your cart is empty... 🙄</p>
       ) : (
 
           <div className={styles.cart_items}>
@@ -33,40 +35,52 @@ const { cartItems } = useContext(CartContext); // Get cartItems from context
                 alt={item.name} 
                 className={styles.image} />
                 
-                      <div className={styles.info_container}>
-              <section className={styles.name_price}>
-                <p>{item.name} </p>
-                <p> {item.price}  </p>
-              </section>
-              <section className={styles.quantity_size}>
-                
-                <section className={styles.quantity}>
-                  <p className={styles.quantity_symbols} onClick={() => setQuantity(quantity - 1)}> - </p>
-                  <p className={styles.quantity_symbols}> {quantity}  </p>
-                  <p className={styles.quantity_symbols} onClick={() => setQuantity(quantity + 1)} > + </p>
+              <div className={styles.info_container}>
+
+                <section className={styles.name_price}>
+                  <p>{item.name} </p>
+                  <p> {item.price} SEK </p>
                 </section>
 
-                <section className={styles.size}>
-                  <p>SIZE:</p>
-                  <select name="size" className={styles.size_select}>
-                    <option className={styles.size_select} value="M">M</option>
-                    <option className={styles.size_select} value="L">L</option>
-                    <option className={styles.size_select} value="XL">XL</option>
-                  </select>
+                <section className={styles.quantity_size}>
+                  
+                  <section className={styles.quantity}>
+                    <p className={styles.quantity_symbols} onClick={() => setQuantity(quantity - 1)}> - </p>
+                    <p className={styles.quantity_symbols}> {quantity}  </p>
+                    <p className={styles.quantity_symbols} onClick={() => setQuantity(quantity + 1)} > + </p>
+                  </section>
+
+                  <section className={styles.size}>
+                    <p>SIZE:</p>
+
+                      <select name="size" className={styles.size_select}>
+                        <option className={styles.size_select} value="M">M</option>
+                        <option className={styles.size_select} value="L">L</option>
+                        <option className={styles.size_select} value="XL">XL</option>
+                      </select>
+                  </section>
+
                 </section>
-              </section>
+
               </div>
 
             </div>
           ) ) }
           </div>
+          
       )}
 
-  
+
+
+
+
+
+
+
         <div className={styles.checkout} >
           <section className={styles.totalprice}>
             <p><strong>TOTAL</strong> incl. VAT & Duties</p>
-            <p>€ 0.00</p>
+            <p> 0.00 SEK</p>
           </section>
           <button className={styles.checkout_btn}>CHECKOUT</button>
         </div>
