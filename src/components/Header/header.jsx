@@ -3,15 +3,12 @@ import { Link } from 'react-router-dom';
 import styles from './header.module.css';
 import Mobilemenu from '../Mobile_menu/mobilemenu';
 import Cart from '../Cart/cart';
-import { CartContext } from '../../components/Context/cartcontext'; // Import CartContext
+import { CartContext } from '../../components/Context/cartcontext';
 
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isCartOpen, setCartOpen] = useState(false);
-
-  const { cartItems } = useContext(CartContext); // Get cartItems from context
-
-  // Calculate the total number of items in the cart
+  const { cartItems } = useContext(CartContext); 
   const totalItemsInCart = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   useEffect(() => {

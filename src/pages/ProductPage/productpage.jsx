@@ -1,11 +1,10 @@
 import styles from './productpage.module.css';
 import productsDatabase from '../../data';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import Card from '../../components/Card/card';
 import { useState, useEffect, useContext } from 'react';
 import Badge from '../../components/Badge/badge.jsx';
 import { CartContext } from '../../components/Context/cartcontext.jsx'; //NY
-
 
 function ProductPage({ limit }) {
   const { id } = useParams();
@@ -13,8 +12,7 @@ function ProductPage({ limit }) {
   const [currentImage, setCurrentImage] = useState('');
   const limitProducts = productsDatabase.slice(0, 4);
   const { addToCart } = useContext(CartContext); //NY
- 
-
+  const location = useLocation();
 
   useEffect(() => {
     const foundProduct = productsDatabase.find((product) => product.id === id);
@@ -26,6 +24,11 @@ function ProductPage({ limit }) {
     }
   }, [id]);
 
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   if (!product) {
     return <h2>Product not found</h2>;
   }
@@ -33,55 +36,54 @@ function ProductPage({ limit }) {
   return (
     <div className={styles.productpage}>
       <div className={styles.product}>
-  
         <div className={styles.gallary}>
-      
-        <div className={styles.product_img_badge}>
-          <img
-            src={`../Images/${currentImage}`}
-            alt={product.name}
-            className={styles.products_img}
-          />
-          <Badge inventory={product.inventory} />
-
-        </div>
-
+          <div className={styles.product_img_badge}>
+            <img
+              src={`../Images/${currentImage}`}
+              alt={product.name}
+              className={styles.products_img}
+            />
+            <Badge inventory={product.inventory} />
+          </div>
 
           <div className={styles.gallary_section}>
-          {product.img.map((image, index) => (
-            <img
-              key={index}
-              src={`../Images/${image}`}
-              alt={`${product.name} ${index + 1}`}
-              className={styles.gallery_img}
-              onClick={() => setCurrentImage(image)}
-            />
-           
-          ))}
-           </div>
+            {product.img.map((image, index) => (
+              <img
+                key={index}
+                src={`../Images/${image}`}
+                alt={`${product.name} ${index + 1}`}
+                className={styles.gallery_img}
+                onClick={() => setCurrentImage(image)}
+              />
+            ))}
+          </div>
         </div>
         <div className={styles.product_info}>
           <h1 className={styles.product_name}>{product.name}</h1>
           <p className={styles.product_price}>Price: {product.price} SEK</p>
           <div className={styles.products_desc}>
-            <p><strong>Description:</strong> {product.desc}</p>
-            <br/>
-            <p><strong>Available sizes:</strong> {product.size}</p>
+            <p>
+              <strong>Description:</strong> {product.desc}
+            </p>
+            <br />
+            <p>
+              <strong>Available sizes:</strong> {product.size}
+            </p>
           </div>
           <div className={styles.btn_inventory}>
             <div>
-
-              <button                             //NY
+              <button
                 className={styles.buy_btn}
                 onClick={() => addToCart(product)}
               >
                 ADD TO CART
               </button>
-
               <p className={styles.below_btn_text}>FREE SHIPPING AND RETURNS!</p>
             </div>
             <div className={styles.inventory_section}>
-              <p><strong>Inventory:</strong></p>
+              <p>
+                <strong>Inventory:</strong>
+              </p>
               <p>{product.inventory}</p>
             </div>
           </div>
@@ -107,11 +109,8 @@ function ProductPage({ limit }) {
               </details>
             </div>
           </div>
-
-
         </div>
       </div>
-
 
       <div className={styles.similar_products}>
         <h2 className={styles.similar_products_title}>SIMILAR PRODUCTS</h2>
@@ -120,10 +119,10 @@ function ProductPage({ limit }) {
             <Card key={product.id} product={product} />
           ))}
         </div>
-        <a className={styles.btn}><Link to="/products">SEE ALL PRODUCTS</Link></a>
+        <a className={styles.btn}>
+          <Link to="/products">SEE ALL PRODUCTS</Link>
+        </a>
       </div>
-      
-
 
       <div className={styles.reviews}>
         <h2 className={styles.reviews_title}>CUSTOMER REVIEWS</h2>
