@@ -22,10 +22,11 @@ const Cart = ({ isCartOpen, setCartOpen }) => {
             <p>X</p>
         </div>
 
-        <h2 className={styles.cart_title}>SHOPPING CART</h2>
+        <h2 className={styles.cart_title}>SHOPPING BAG</h2>
 
         {cartItems.length === 0 ? (
-          <p>Your cart is empty... 🙄</p>
+          <p>Your shopping bag is empty... 🙄</p>
+
         ) : (
           <div className={styles.cart_items}>
             {cartItems.map((item, index) => (
