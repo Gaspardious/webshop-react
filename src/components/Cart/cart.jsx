@@ -1,17 +1,19 @@
 import styles from './cart.module.css'
-import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
-import { useState, useEffect, useContext } from 'react';
-import { CartContext } from '../../components/Context/cartcontext.jsx'; //NY
+import { useContext } from 'react';
+import { CartContext } from '../../components/Context/cartcontext.jsx'; // NY
 
+const Cart = ({ isCartOpen, setCartOpen }) => {
+  const { cartItems, updateQuantity, removeFromCart } = useContext(CartContext); // Use context functions
 
-
-import React from 'react'
-
-const Cart = ({ isCartOpen, setCartOpen, product }) => {
-const [quantity, setQuantity] = useState(1)
-const [size, setSize] = useState('M')
-const { cartItems } = useContext(CartContext); // Get cartItems from context
+  // Function to calculate the total price
+  const calculateTotalPrice = () => {
+    let totalPrice = 0;
+    cartItems.forEach((item) => {
+      totalPrice += item.price * item.quantity; 
+    });
+    return totalPrice;
+  };
+  
 
   return (
     <>
@@ -21,74 +23,73 @@ const { cartItems } = useContext(CartContext); // Get cartItems from context
         </div>
 
         <h2 className={styles.cart_title}>SHOPPING CART</h2>
-      
-     
-    {cartItems.length === 0 ? (
-        <p>your cart is empty... 🙄</p>
-      ) : (
 
+        {cartItems.length === 0 ? (
+          <p>Your cart is empty... 🙄</p>
+        ) : (
           <div className={styles.cart_items}>
-          {cartItems.map((item, index) => (                // Loop through cartItems and display them in the cart
-            <div key={index} className={styles.cart_item}>
-              <img 
-                src={`/Images/${item.img[0]}`} 
-                alt={item.name} 
-                className={styles.image} />
-                
-              <div className={styles.info_container}>
+            {cartItems.map((item, index) => (
+              <div key={index} className={styles.cart_item}>
+                <img 
+                  src={`/Images/${item.img[0]}`} 
+                  alt={item.name} 
+                  className={styles.image} 
+                />
 
-                <section className={styles.name_price}>
-                  <p>{item.name} </p>
-                  <p> {item.price} SEK </p>
-                </section>
-
-                <section className={styles.quantity_size}>
-                  
-                  <section className={styles.quantity}>
-                    <p className={styles.quantity_symbols} onClick={() => setQuantity(quantity - 1)}> - </p>
-                    <p className={styles.quantity_symbols}> {quantity}  </p>
-                    <p className={styles.quantity_symbols} onClick={() => setQuantity(quantity + 1)} > + </p>
+                <div className={styles.info_container}>
+                  <section className={styles.name_price}>
+                    <p>{item.name}</p>
+                    <p>{item.price} SEK</p>
                   </section>
 
-                  <section className={styles.size}>
-                    <p>SIZE:</p>
+                  <section className={styles.quantity_size}>
+                    <section className={styles.quantity}>
+                      <p 
+                        className={styles.quantity_symbols} 
+                        onClick={() => updateQuantity(item.id, -1)}
+                      > 
+                        - 
+                      </p>
+                      <p className={styles.quantity_symbols}>{item.quantity}</p>
+                      <p 
+                        className={styles.quantity_symbols} 
+                        onClick={() => updateQuantity(item.id, 1)}
+                      > 
+                        + 
+                      </p>
+                    </section>
 
-                      <select name="size" className={styles.size_select}>
-                        <option className={styles.size_select} value="M">M</option>
-                        <option className={styles.size_select} value="L">L</option>
-                        <option className={styles.size_select} value="XL">XL</option>
+                    <section className={styles.size}>
+                      <p>SIZE:</p>
+                      <select 
+                        name="size" 
+                        className={styles.size_select} 
+                        value={item.size}
+                        // Update size if needed, though it is not currently implemented in the CartContext
+                        onChange={(e) => console.log('Size change not yet implemented')}
+                      >
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
                       </select>
+                    </section>
                   </section>
-
-                </section>
-
+                </div>
               </div>
-
-            </div>
-          ) ) }
+            ))}
           </div>
-          
-      )}
+        )}
 
-
-
-
-
-
-
-
-        <div className={styles.checkout} >
+        <div className={styles.checkout}>
           <section className={styles.totalprice}>
             <p><strong>TOTAL</strong> incl. VAT & Duties</p>
-            <p> 0.00 SEK</p>
+            <p>{calculateTotalPrice()} SEK</p>
           </section>
           <button className={styles.checkout_btn}>CHECKOUT</button>
         </div>
-
-    </div>
-
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

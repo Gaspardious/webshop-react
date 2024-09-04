@@ -1,12 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './header.module.css';
 import Mobilemenu from '../Mobile_menu/mobilemenu';
 import Cart from '../Cart/cart';
+import { CartContext } from '../../components/Context/cartcontext'; // Import CartContext
 
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isCartOpen, setCartOpen] = useState(false);
+
+  const { cartItems } = useContext(CartContext); // Get cartItems from context
+
+  // Calculate the total number of items in the cart
+  const totalItemsInCart = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   useEffect(() => {
     function handleScroll() {
@@ -19,8 +25,6 @@ export default function Header() {
         navLinks.forEach((link) => {
           link.style.fontSize = "14px";
         });
-
-        
       } else {
         header.style.height = "60px";
         header.style.background = "var(--mainColor)";
@@ -28,8 +32,6 @@ export default function Header() {
         navLinks.forEach((link) => {
           link.style.fontSize = "18px";
         });
-
-
       }
     }
 
@@ -43,11 +45,9 @@ export default function Header() {
   return (
     <>
       <header className={styles.header}>
-
-      <Link to="/">
-        {/*   <img src="/Images/logo.png" alt="" className={styles.logo} /> */}
-        <h1  className={styles.logo1}>STICKY</h1>
-        <h1  className={styles.logo2}> SWEATER</h1>
+        <Link to="/">
+          <h1 className={styles.logo1}>STICKY</h1>
+          <h1 className={styles.logo2}> SWEATER</h1>
         </Link>
 
         <nav>
@@ -59,28 +59,36 @@ export default function Header() {
           </ul>
         </nav>
 
-<div className={styles.symbols}>
-        <img src="/Images/heart_white.png"       className={styles.heart} />
+        <div className={styles.symbols}>
+          <img src="/Images/heart_white.png" className={styles.heart} />
 
-        <Cart isCartOpen={isCartOpen} setCartOpen={setCartOpen} />
-        <img src="/Images/icons8-cart-80.png" 
-              alt="cart" 
+          {/* Cart icon with number ticker */}
+          <div className={styles.cart_container} onClick={() => setCartOpen(!isCartOpen)}>
+            <img
+              src="/Images/icons8-shopping-bag-50.png"
+              alt="cart"
               className={styles.cart}
-              onClick={() => setCartOpen(!isCartOpen)}
-              />
+            />
+            {/* Display number of items in cart if greater than 0 */}
+            {totalItemsInCart > 0 && (
+              <span className={styles.cart_count}>{totalItemsInCart}</span>
+            )}
+          </div>
 
-
-
-<Mobilemenu isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
-      <img src="/Images/icons8-menu-30.svg" 
-            alt="menu" 
+          <Mobilemenu isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
+          <img
+            src="/Images/icons8-menu-30.svg"
+            alt="menu"
             className={styles.hamburger_menu}
-            onClick={() => setMenuOpen(!isMenuOpen)} 
-        />
-
-</div>
-
+            onClick={() => setMenuOpen(!isMenuOpen)}
+          />
+        </div>
       </header>
+
+      {/* Conditionally render the Cart component */}
+      {isCartOpen && (
+        <Cart isCartOpen={isCartOpen} setCartOpen={setCartOpen} />
+      )}
     </>
   );
 }

@@ -14,10 +14,11 @@
     justify-content: space-between;
     flex-direction: column;
     border-left: 0.5px solid lightgrey;
+    z-index: 10 ;
   }
 
   .cartOpen {
-    width: 35%;
+    width: 50%;
   }
 
   .cart_items {
@@ -33,7 +34,7 @@
     flex-direction: row;
     align-items: center;
     border: 1px solid lightgrey;
-    margin: 5px 0px;
+    margin: 0px 0px;
   }
 
   .info_container {

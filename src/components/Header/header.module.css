@@ -8,10 +8,27 @@
     position: fixed;
     transition: 0.4s;
     width: 100%;
-    z-index: 1000;
+    z-index: 9;
     border-bottom: 0.1px solid rgb(255, 255, 255);
-
 }
+
+.cart_container {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .cart_count {
+    position: absolute;
+    top: 10px;
+    right: -5px;
+    background-color: whitesmoke;
+    color: var(--mainColor);
+    font-size: 8px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    z-index: 10;
+  }
 
 .hamburger_menu {
     display: none;
@@ -21,7 +38,7 @@
 
 .cart, .heart {
     width: 20px;
-
+    height: 20px;
 
 }
 .symbols {
