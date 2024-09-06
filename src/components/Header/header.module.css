@@ -31,8 +31,9 @@
   }
 
 .hamburger_menu {
-    display: none;
     cursor: pointer;
+    margin-left: 20px;
+    width: 15px;
 }
 
 
@@ -98,6 +99,7 @@ a {
     .hamburger_menu {
         display: block;
         width: 15px;
+        margin-left: 20px;
     }
 
     .nav_ul {

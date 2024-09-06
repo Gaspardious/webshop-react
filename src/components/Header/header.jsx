@@ -18,7 +18,8 @@ export default function Header() {
 
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         header.style.height = "45px";
-        header.style.background = "var(--mainColor)";
+        header.style.background = "rgba(0, 0, 0, 0.5)";
+        header.style.borderBottom = "none";
         navLinks.forEach((link) => {
           link.style.fontSize = "14px";
         });
@@ -42,19 +43,26 @@ export default function Header() {
   return (
     <>
       <header className={styles.header}>
+      <Mobilemenu isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
+          <img
+            src="/Images/icons8-menu-30.svg"
+            alt="menu"
+            className={styles.hamburger_menu}
+            onClick={() => setMenuOpen(!isMenuOpen)}
+          />
         <Link to="/">
           <h1 className={styles.logo1}>STICKY</h1>
           <h1 className={styles.logo2}> SWEATER</h1>
         </Link>
 
-        <nav>
+{/*         <nav>
           <ul className={styles.nav_ul}>
             <li><Link to="/">HOME</Link></li>
             <li><Link to="/products">PRODUCTS</Link></li>
             <li><Link to="/about">ABOUT</Link></li>
             <li><Link to="/contact">CONTACT</Link></li>
           </ul>
-        </nav>
+        </nav> */}
 
         <div className={styles.symbols}>
           <img src="/Images/heart_white.png" className={styles.heart} />
@@ -71,14 +79,6 @@ export default function Header() {
               <span className={styles.cart_count}>{totalItemsInCart}</span>
             )}
           </div>
-
-          <Mobilemenu isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
-          <img
-            src="/Images/icons8-menu-30.svg"
-            alt="menu"
-            className={styles.hamburger_menu}
-            onClick={() => setMenuOpen(!isMenuOpen)}
-          />
         </div>
       </header>
 

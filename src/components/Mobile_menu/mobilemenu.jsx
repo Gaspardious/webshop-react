@@ -5,7 +5,7 @@ const Mobilemenu = ({ isMenuOpen, setMenuOpen }) => {
   return (
     <>
       <div className={styles.mobileNav} 
-      style={{ width: isMenuOpen ? '60%' : '0' } }
+      style={{ width: isMenuOpen ? '40%' : '0' } }
       onClick={() => setMenuOpen(false)}
       >
    
@@ -19,7 +19,7 @@ const Mobilemenu = ({ isMenuOpen, setMenuOpen }) => {
       </div>
       <div 
         className={styles.overlay}
-        style={{ width: isMenuOpen ? '40%' : '0' }} 
+        style={{ width: isMenuOpen ? '60%' : '0' }} 
         onClick={() => setMenuOpen(false)}
       />
     </>

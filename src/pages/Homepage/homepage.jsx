@@ -79,6 +79,16 @@ export default function Homepage () {
             <a className={styles.btn}><Link to="/products">SEE ALL PRODUCTS</Link></a>
         </div>
 
+        <div className={styles.hero}>
+            <div className={styles.hero__desc}>
+                <h1 className={styles.hero_title}>STICKY SWEATER</h1>
+                <h2 className={styles.hero_undertitle}>GOTHENBURG</h2>
+                <h3 className={styles.tag}>DESIGNED IN SWEDEN - MADE IN ITALY</h3>
+                <li className={styles.hero__btn}><Link to="/products">GO TO PRODUCTS</Link></li>
+            </div>
+            <img src={images[currentImage]} alt="" className={styles.slides} />
+            <li className={styles.hero__btn_mobile}><Link to="/products">GO TO PRODUCTS</Link></li>
+        </div> 
 
     </>
     )
