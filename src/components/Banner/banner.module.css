@@ -17,7 +17,7 @@
 .banner, .middle_banner {
     padding: 5px;
     font-size: 10px;
-    color: #ffffff;
+    color: var(--textColorTwo);
     transition: 0.4s;
     font-weight: 500;
 }

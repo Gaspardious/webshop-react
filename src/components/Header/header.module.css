@@ -16,28 +16,33 @@
     position: relative;
     cursor: pointer;
   }
-  
+
   .cart_count {
     position: absolute;
     top: 10px;
     right: -5px;
-    background-color: whitesmoke;
-    color: var(--mainColor);
+    background-color: black;
+    color: var(--textColorOne);
     font-size: 8px;
     font-weight: bold;
     padding: 2px 6px;
     border-radius: 50%;
     z-index: 10;
+    border: 1px solid orange;
   }
 
-.hamburger_menu {
+.menu, .menu_black {
     cursor: pointer;
     margin-left: 20px;
     width: 15px;
 }
 
+.menu, .cart, .heart {
+    display: none;
+}
 
-.cart, .heart {
+
+.cart, .heart, .cart_black, .heart_black {
     width: 20px;
     height: 20px;
 
@@ -74,6 +79,7 @@ a {
     padding-left: 22px;
     letter-spacing: 8px;
     margin-bottom: -2px;
+    color: var(--textColorTwo);
 }
 
 .logo2 {
@@ -82,7 +88,7 @@ a {
     width: 50px;
     font-size: 21px;
     padding-left: 20px;
-
+    color: var(--textColorTwo);
 }
 
 
@@ -95,16 +101,7 @@ a {
     }
 
 
-
-    .hamburger_menu {
-        display: block;
-        width: 15px;
-        margin-left: 20px;
-    }
-
-    .nav_ul {
-        display: none;
-    }
+ 
 
     ul {
         gap: 1rem;
@@ -123,14 +120,6 @@ a {
         display: flex;
         list-style-type: none;
         gap: 0.5rem;
-    }
-
-    .hamburger_menu {
-        display: block;
-    }
-
-    .nav_ul {
-        display: none;
     }
 
   }

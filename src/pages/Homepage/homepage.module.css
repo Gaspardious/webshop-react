@@ -57,12 +57,13 @@ z-index: -1;
     list-style-type: none;
     width: 110px;
     text-align: center;
+    border: 0.5px solid var(--textColorTwo);
     }
 
     .hero__btn > a {
         font-family: var(--titleFont);
         font-size: 14px;
-        color: var(--textColorOne);
+        color: var(--textColorTwo);
         }
 
 
@@ -73,6 +74,7 @@ z-index: -1;
     list-style-type: none;
     width: 110px;
     text-align: center;
+    border: 0.5px solid var(--textColorTwo);
     display: none;
     }
 
@@ -80,6 +82,7 @@ z-index: -1;
         font-family: var(--titleFont);
         font-size: 14px;
         color: var(--textColorOne);
+        
         display: none;
         }
 
@@ -93,13 +96,14 @@ z-index: -1;
     justify-content: center;
     align-items: center;
     padding: 7px;
-
+    border: 0.5px solid var(--textColorTwo);
     }
 
     .btn > a {
         font-family: var(--titleFont);
         font-size: 12px;
         padding: 0px;
+        color: var(--textColorTwo);
         }
 
 
@@ -191,6 +195,7 @@ h3 {
 
     .hero__btn_mobile > a {
         display: block;
+        color: var(--textColorTwo);
         }
 
     .hero__btn {

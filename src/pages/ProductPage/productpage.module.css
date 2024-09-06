@@ -88,7 +88,7 @@
     margin-top: 15px;
     font-size: 27px;
     border-radius: 5px;
-    color: var(--textColorOne);
+    color: var(--textColorTwo);
     font-family: var(--titleFont);
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -96,7 +96,6 @@
 
 .buy_btn:hover {
     background-color: var(--mainColorHover);
-    color: black;
 
 }
 
@@ -151,9 +150,8 @@ ol {
 }
 
 .reviews {
-    background-color: rgb(244, 244, 244);
+    background-color: rgba(239, 239, 239, 0.198);
     padding: 20px;
-    border: 1px solid rgb(235, 235, 235);
     margin-top: 50px;
     color: var(--textColorTwo);
 }
@@ -222,6 +220,7 @@ summary {
     justify-content: center;
     align-items: center;
     padding: 7px;
+    border: 0.5px solid var(--textColorTwo);
 
     }
 
@@ -229,6 +228,7 @@ summary {
         font-family: var(--titleFont);
         font-size: 12px;
         padding: 0px;
+        color: var(--textColorTwo);
         }
 
 

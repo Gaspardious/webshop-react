@@ -22,7 +22,7 @@ footer {
 }
 
 footer >div > p {
-    color: var(--textColorOne);
+    color: var(--textColorTwo);
     font-family: var(bodyFont);
     font-size: x-small;
     text-align: center;
@@ -44,7 +44,7 @@ footer >div > p {
 }
 
 .brandname {
-    color: var(--textColorOne);
+    color: var(--textColorTwo);
     font-family: var(--titleFont);  
     font-size: 50px;
     font-weight: bold;

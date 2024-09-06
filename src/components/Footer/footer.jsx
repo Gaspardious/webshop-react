@@ -11,8 +11,9 @@ return (
 
 
                 <ul className={styles.footer_ul}>
-                    <img src="Images/ig_white.png" className={styles.footer_logo} alt="" />
-                    <img src="Images/fb_white.png" className={styles.footer_logo} alt="" />
+                    <img src="Images/ig_black.svg" className={styles.footer_logo} alt="Instagram Logo" />
+                    <img src="Images/fb_black.svg" className={styles.footer_logo} alt="Facebook Logo" />
+                    <img src="Images/tt_black.svg" className={styles.footer_logo} alt="Tik Tok Logo" />
                 </ul>
        
                 <h2 className={styles.brandname}>STICKY SWEATER</h2>

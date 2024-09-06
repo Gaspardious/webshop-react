@@ -6,7 +6,7 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background: linear-gradient(160deg, var(--mainColor) 5%, var(--mainColor) 95%);  
+  background: var(--textColorTwo);  
   overflow: hidden; 
   transition: width 0.3s ease; 
   display: flex;
