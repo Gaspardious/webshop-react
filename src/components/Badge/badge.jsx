@@ -8,12 +8,12 @@ const Badge = ({ inventory }) => {
 
     if (inventory === 0) {
         badgeText = "SOLD OUT";
-        badgeStyle.backgroundColor = "red";
+        badgeStyle.backgroundColor = "pink";
     } else if (inventory <= 5) {
         badgeText = "FEW LEFT";
     } else if (inventory > 3) {
         badgeText = "IN STOCK";
-        badgeStyle.backgroundColor = "green";
+        badgeStyle.backgroundColor = "lightgreen";
     }
 
     return (
