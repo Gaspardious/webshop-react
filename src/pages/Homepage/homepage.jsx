@@ -25,9 +25,16 @@ export default function Homepage () {
 
     return (
     <>
-       <div className={styles.hero_video}>
-       <div className={styles.hero_video}>
-  <video autoPlay loop muted playsInline>
+
+
+<div className={styles.hero_video}>
+  <video 
+    autoPlay 
+    loop 
+    muted 
+    playsInline 
+    onCanPlayThrough={(event) => event.target.play()} // Ensures autoplay works consistently
+  >
     <source src="/video/erik.mp4" type="video/mp4" />
     <source src="/video/erik.webm" type="video/webm" />
     Your browser does not support the video tag.
@@ -37,11 +44,9 @@ export default function Homepage () {
     <h1 className={styles.hero_title2}>STICKY SWEATER</h1>
     <h2 className={styles.hero_undertitle2}>GOTHENBURG</h2>
     <h3 className={styles.tag2}>DESIGNED IN SWEDEN - MADE IN ITALY</h3>
-
   </div>
 </div>
 
-        </div> 
         
 
 <div className={styles.banner}>    
