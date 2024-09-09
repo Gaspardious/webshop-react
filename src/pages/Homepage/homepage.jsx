@@ -25,15 +25,22 @@ export default function Homepage () {
 
     return (
     <>
-       <div className={styles.hero}>
-            <div className={styles.hero__desc}>
-                <h1 className={styles.hero_title}>STICKY SWEATER</h1>
-                <h2 className={styles.hero_undertitle}>GOTHENBURG</h2>
-                <h3 className={styles.tag}>DESIGNED IN SWEDEN - MADE IN ITALY</h3>
-                <li className={styles.hero__btn}><Link to="/products">GO TO PRODUCTS</Link></li>
-            </div>
-            <img src={images[currentImage]} alt="" className={styles.slides} />
-            <li className={styles.hero__btn_mobile}><Link to="/products">GO TO PRODUCTS</Link></li>
+       <div className={styles.hero_video}>
+       <div className={styles.hero_video}>
+  <video autoPlay loop muted playsInline>
+    <source src="/video/erik.mp4" type="video/mp4" />
+    <source src="/video/erik.webm" type="video/webm" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div className={styles.overlay}>
+    <h1 className={styles.hero_title2}>STICKY SWEATER</h1>
+    <h2 className={styles.hero_undertitle2}>GOTHENBURG</h2>
+    <h3 className={styles.tag2}>DESIGNED IN SWEDEN - MADE IN ITALY</h3>
+
+  </div>
+</div>
+
         </div> 
         
 
