@@ -33,6 +33,7 @@ export default function Homepage () {
     loop 
     muted 
     playsInline 
+    controls={false}
     onCanPlayThrough={(event) => event.target.play()} // Ensures autoplay works consistently
   >
     <source src="/video/erik.mp4" type="video/mp4" />
