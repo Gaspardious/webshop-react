@@ -42,9 +42,9 @@ export default function Homepage () {
   </video>
 
   <div className={styles.overlay}>
-    <h1 className={styles.hero_title2}>STICKY SWEATER</h1>
-    <h2 className={styles.hero_undertitle2}>GOTHENBURG</h2>
-    <h3 className={styles.tag2}>DESIGNED IN SWEDEN - MADE IN ITALY</h3>
+    <h1 className={styles.hero_title2}>AUTUMN</h1>
+    <h2 className={styles.hero_undertitle2}>IS HERE</h2>
+    <h3 className={styles.tag2}>SEASON 2024</h3>
   </div>
 </div>
 

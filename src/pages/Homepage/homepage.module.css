@@ -25,8 +25,8 @@
 .hero_undertitle2 {
 color: var(--textColorOne);
 font-family: var(--titleFont);
-font-size: 32.5px;
-letter-spacing: 6px;
+font-size: 29px;
+letter-spacing: 0px;
 }
 
 .tag2 {
