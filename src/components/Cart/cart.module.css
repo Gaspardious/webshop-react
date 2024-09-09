@@ -172,4 +172,15 @@
     }
     
   }
+
+  @media screen and (max-width: 414px) {
+
+    .quantity_symbols {
+      height: 49px;
+      width: 30px;
+
+    }
+  
+    
+    }
   

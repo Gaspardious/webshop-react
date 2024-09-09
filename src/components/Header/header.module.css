@@ -122,5 +122,12 @@ a {
         gap: 0.5rem;
     }
 
+    
+.symbols {
+    display: flex;
+    gap: 1rem;
+    padding-right: 35px;
+}
+
   }
 

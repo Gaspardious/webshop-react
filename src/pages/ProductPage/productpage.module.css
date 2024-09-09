@@ -285,4 +285,18 @@ summary {
     width: 270px;
   }
 
+  .buy_btn {
+    background-color: var(--mainColor);
+    border: 1px solid;
+    width: 230px;
+    height: 50px;
+    margin-top: 15px;
+    font-size: 27px;
+    border-radius: 5px;
+    color: var(--textColorTwo);
+    font-family: var(--titleFont);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
 }
