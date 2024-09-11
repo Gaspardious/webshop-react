@@ -7,6 +7,7 @@ import Products from "./pages/Products/products";
 import ProductPage from "./pages/ProductPage/productpage";
 import Homepage from "./pages/Homepage/homepage";
 import Contact from "./pages/Contact/contact";
+import Checkout from "./pages/Checkout/checkout";
 
 
 
@@ -22,6 +23,7 @@ const router = createBrowserRouter ([
   { path: 'products', element: <Products /> },
   { path: 'contact', element: <Contact /> },
   { path: 'product/:id', element: <ProductPage />},
+  { path: 'checkout', element: <Checkout />},
 ]
 },
 ]);

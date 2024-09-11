@@ -1,10 +1,10 @@
 import styles from './cart.module.css'
 import { useContext, useEffect } from 'react';
 import { CartContext } from '../../components/Context/cartcontext.jsx'; // NY
+import { Link } from 'react-router-dom';
 
 const Cart = ({ isCartOpen, setCartOpen }) => {
   const { cartItems, updateQuantity, removeFromCart } = useContext(CartContext); // Use context functions
-
   // Function to calculate the total price
   const calculateTotalPrice = () => {
     let totalPrice = 0;
@@ -25,9 +25,6 @@ const Cart = ({ isCartOpen, setCartOpen }) => {
       document.body.style.overflow = 'auto';
     };
   }, [isCartOpen]);
-  
-
-
 
 
   return (
@@ -103,7 +100,9 @@ const Cart = ({ isCartOpen, setCartOpen }) => {
             <p><strong>TOTAL</strong> incl. VAT & Duties</p>
             <p>{calculateTotalPrice()} SEK</p>
           </section>
-          <button className={styles.checkout_btn}>CHECKOUT</button>
+         
+          <Link to="/checkout"onClick={() => setCartOpen(false)}> <button className={styles.checkout_btn}>CHECKOUT </button></Link>
+         
         </div>
       </div>
       <div 
