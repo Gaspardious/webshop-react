@@ -8,7 +8,7 @@
     right: 0;
     background: whitesmoke;  
     overflow: hidden; 
-    transition: width 0.3s ease; 
+    transition: width 0.1s ease; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,8 +19,17 @@
 
   .cartOpen {
     width: 40%;
+  }
 
-
+  .overlay {
+    position: fixed;
+    width: 0;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 100; 
+    transition: width 0.1s ease; 
   }
 
   .cart_items {
@@ -171,6 +180,10 @@
       width: 100%;
     }
     
+    .overlay {
+      display: none ;
+    }
+
   }
 
   @media screen and (max-width: 414px) {
@@ -180,7 +193,7 @@
       width: 30px;
 
     }
+
   
-    
     }
   

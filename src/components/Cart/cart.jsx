@@ -27,10 +27,15 @@ const Cart = ({ isCartOpen, setCartOpen }) => {
   }, [isCartOpen]);
   
 
+
+
+
   return (
     <>
       <div className={`${styles.cart} ${isCartOpen ? styles.cartOpen : ''}`}>
-        <div className={styles.close_btn} onClick={() => setCartOpen(false)}>
+        <div className={styles.close_btn} 
+          style={{ width: isCartOpen ?  '40%' : '0' } }
+          onClick={() => setCartOpen(false)}>
             <p>X</p>
         </div>
 
@@ -101,6 +106,11 @@ const Cart = ({ isCartOpen, setCartOpen }) => {
           <button className={styles.checkout_btn}>CHECKOUT</button>
         </div>
       </div>
+      <div 
+        className={styles.overlay}
+        style={{ width: isCartOpen ? '60%' : '0' }} 
+        onClick={() => setCartOpen(false)}
+      />
     </>
   );
 };
