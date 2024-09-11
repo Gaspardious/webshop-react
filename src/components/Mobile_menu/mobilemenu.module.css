@@ -7,12 +7,12 @@
   top: 0;
   left: 0;
   background: var(--textColorOne);  
-  overflow: hidden; 
   transition: width 0.1s ease; 
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   flex-direction: column;
+  justify-content: space-evenly;
+  overflow: hidden;
 }
 
 .mobileNav ul {
@@ -87,12 +87,12 @@
 .social {
   display: flex;
   flex-direction: row;
-  height: 30px;
-  gap: 15px;
+  gap: 10px;
+  margin-bottom: 75px;
 }
 
 .social_logo {
-  width: 30px;
+  width: 25px;
 }
 
 

@@ -1,5 +1,5 @@
 import styles from './cart.module.css'
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { CartContext } from '../../components/Context/cartcontext.jsx'; // NY
 
 const Cart = ({ isCartOpen, setCartOpen }) => {
@@ -13,6 +13,18 @@ const Cart = ({ isCartOpen, setCartOpen }) => {
     });
     return totalPrice;
   };
+
+  useEffect(() => {
+    if (isCartOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isCartOpen]);
   
 
   return (
