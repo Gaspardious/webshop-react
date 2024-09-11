@@ -38,7 +38,7 @@ letter-spacing: 0px;
 
 .hero_video {
   position: relative;   /* Ensures the overlay and video are positioned relative to each other */
-  height: 100vh;        /* Full viewport height */
+  height: 75vh;        /* Full viewport height */
   width: 100vw;         /* Full viewport width */
   overflow: hidden;     /* Prevents scrollbars if the video overflows */
   z-index: -1;
