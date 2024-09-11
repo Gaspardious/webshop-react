@@ -6,14 +6,13 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background: var(--textColorTwo);  
+  background: var(--textColorOne);  
   overflow: hidden; 
-  transition: width 0.3s ease; 
+  transition: width 0.1s ease; 
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  gap: 100px;
 }
 
 .mobileNav ul {
@@ -27,20 +26,29 @@
 }
 
 .mobileNav ul li {
-  margin: 10px;
+  margin: 5px;
 }
 
 .mobileNav ul li a {
-  color: #fff; 
+  color: var(--textColorTwo); 
   text-decoration: none;
-  transition: color 0.3s ease;
-  font-size: 25px;
+  transition: color 0.1s ease;
+  font-size: 22px;
   font-family: var(--titleFont);
+}
+.mobileNav > ul > .under_menu > a {
+  color: var(--textColorTwo); 
+  text-decoration: none;
+  transition: color 0.1s ease;
+  font-size: 18px;
+  font-family: var(--titleFont);
+  font-weight: 100;
 }
 
 .mobileNav ul li a:hover {
   color: #ccc;
 }
+
 
 .overlay {
   position: fixed;
@@ -50,9 +58,50 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.5); 
   z-index: 100; 
-  transition: width 0.3s ease; 
+  transition: width 0.1s ease; 
 }
 
-.logo {
-  width: 100px;
+.logo1 {
+  transition: 0.1s;
+  font-family: var(--titleFont);
+  font-size: 9.5px;
+  letter-spacing: 8px;
+  margin-bottom: -2px;
+  color: var(--textColorTwo);
+  padding-left: 3px;
+}
+
+.logo2 {
+  transition: 0.1s;
+  font-family: var(--titleFont);
+  font-size: 21px;
+  color: var(--textColorTwo);
+}
+
+.line {
+  width: 70%;
+  height: 0.1px;
+  color: lightgray;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  gap: 15px;
+}
+
+.social_logo {
+  width: 30px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .mobileNav {
+    width: 50%;
+  }
+
+  .overlay {
+    width: 50%;
+  }
 }
