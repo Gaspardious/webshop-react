@@ -88,13 +88,11 @@
 
 .name_price{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
   align-items: center;
   min-height: 50px;
-  padding: 0px 30px;
   border-left: 1px solid lightgrey;
-  background-color: white;
 }
 
 .quantity_size {
