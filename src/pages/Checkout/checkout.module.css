@@ -23,14 +23,15 @@
   color: var(--textColorTwo);
   font-size: 1rem;
   font-family: var(--titleFont);
-    margin: 20px 10px;
+  margin: 20px 10px;
+  flex-grow: 4;
 }
 
 .checkout_summary_price {
   color: var(--textColorTwo);
   font-size: 0.7rem;
   font-family: var(--titleFont);
-  margin: 10px 10px;
+  flex-grow: 1;
 }
 
 .checkout_form {
@@ -50,10 +51,16 @@
 
 }
 
+summary::-webkit-details-marker {
+  padding: 10px;
+  width: 15px;
+  height: 15px;
+  color: lightslategray;
+}
+
 .checkout_summary_section {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   height: 20px;
   margin: 10px 0px;
   align-items: center;
