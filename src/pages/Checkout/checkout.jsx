@@ -21,8 +21,8 @@ const Checkout = () => {
 
   
     <div className={styles.checkout_summary}>
-              <details>
-                <summary>
+              <details  className={styles.checkout_details_section}>
+                <summary className={styles.checkout_summary_section}>
                   <h3 className={styles.checkout_summary_title}>SHOW ORDER SUMMARY</h3>
                   <p className={styles.checkout_summary_price}>{calculateTotalPrice()} SEK</p>
                 </summary>

@@ -11,7 +11,6 @@
   font-size: 1rem;
   margin: 10px 10px;
   border-bottom: 1px solid var(--bannerColor);
-
 }
 
 .checkout_summary_image {
@@ -42,7 +41,7 @@
     align-items: center;
 }
 
-details {
+.checkout_details_section {
   display: flex;
   flex-direction: column;
   margin: 10px 0px;
@@ -51,7 +50,7 @@ details {
 
 }
 
-summary {
+.checkout_summary_section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
