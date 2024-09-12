@@ -39,7 +39,7 @@ const Cart = ({ isCartOpen, setCartOpen }) => {
         <h2 className={styles.cart_title}>SHOPPING BAG</h2>
 
         {cartItems.length === 0 ? (
-          <p>Your shopping bag is empty... 🙄</p>
+          <p className={styles.empty_bag}>Your shopping bag is empty... 🛍️</p>
 
         ) : (
           <div className={styles.cart_items}>
@@ -95,15 +95,21 @@ const Cart = ({ isCartOpen, setCartOpen }) => {
           </div>
         )}
 
+
+          
+
         <div className={styles.checkout}>
           <section className={styles.totalprice}>
             <p><strong>TOTAL</strong> incl. VAT & Duties</p>
             <p>{calculateTotalPrice()} SEK</p>
-          </section>
-         
+          </section> 
           <Link to="/checkout"onClick={() => setCartOpen(false)}> <button className={styles.checkout_btn}>CHECKOUT </button></Link>
-         
         </div>
+
+        <div className={styles.upsale}>   
+            <h2>Need anything else?</h2>  
+            <p>UPSALE - SECTION</p>
+          </div> 
       </div>
       <div 
         className={styles.overlay}

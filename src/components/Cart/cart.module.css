@@ -126,6 +126,17 @@
     font-family: var(--titleFont);
   }
 
+  .upsale {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-top: 1px solid lightgrey;
+    justify-content: center;
+    align-items: center;
+  }
+
  .checkout_btn {
     width: 100%;
     height: 50px;
@@ -147,13 +158,16 @@
   width: 100%;
 }
 
+.empty_bag {
+  margin: 100px 0px;
+  font-size: 0.9rem;
+}
 
 
   .totalprice {
     color: var(--textColorTwo);
-    font-size: 0.7rem;
     font-family: var(--bodyFont);
-    padding: 5px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;

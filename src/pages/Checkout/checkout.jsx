@@ -105,9 +105,8 @@ const Checkout = () => {
         <input type="text" id="city" name="city" placeholder='Apartment suite, etc (optional)'  />
         <input type="text" id="Postal code" name="Postal code" placeholder='Postal code' required />
         <input type="text" id="City" name="City" placeholder='City' required />
-        <button type="submit">Continue</button>
     </form>
-
+    <button className={styles.continue_btn} type="submit">Continue</button>
 
 
 
