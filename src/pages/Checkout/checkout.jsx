@@ -22,24 +22,10 @@ const Checkout = () => {
   
     <div className={styles.checkout_summary}>
               <details>
-                <summary >
-                  <h3 className={styles.checkout_summary_title}> ► SHOW ORDER SUMMARY</h3>
-                  <p>{calculateTotalPrice()} SEK</p>
+                <summary>
+                  <h3 className={styles.checkout_summary_title}>SHOW ORDER SUMMARY</h3>
+                  <p className={styles.checkout_summary_price}>{calculateTotalPrice()} SEK</p>
                 </summary>
-  {/*               <div className={styles.checkout_summary_items}>
-                  {cartItems.map((item, index) => (
-                    <div key={index} className={styles.checkout_summary_item}>
-                      <img 
-                        src={`/Images/${item.img[0]}`} 
-                        alt={item.name} 
-                        className={styles.checkout_summary_image} 
-                      />
-                      <p>{item.name}</p>
-                      <p>{item.price} SEK</p>
-                      <p>Quantity: {item.quantity}</p>
-                    </div>
-                  ))}
-                </div> */}
 
 <div className={styles.cart_items}>
             {cartItems.map((item, index) => (

@@ -27,6 +27,13 @@
     margin: 20px 10px;
 }
 
+.checkout_summary_price {
+  color: var(--textColorTwo);
+  font-size: 0.7rem;
+  font-family: var(--titleFont);
+  margin: 10px 10px;
+}
+
 .checkout_form {
   display: flex;
   flex-direction: column;
@@ -40,8 +47,8 @@ details {
   flex-direction: column;
   margin: 10px 0px;
   background-color: rgb(244, 244, 244);
-  padding: 5px;
-  border-radius: 10px;
+  padding: 5px 0px;
+
 }
 
 summary {
@@ -50,7 +57,7 @@ summary {
   justify-content: space-between;
   width: 100%;
   height: 20px;
-  margin: 10px 0px;
+  margin: 20px 0px;
   align-items: center;
   background-color: rgb(244, 244, 244);
 }
@@ -86,7 +93,7 @@ summary {
   flex-direction: row;
   align-items: center;
   min-height: 50px;
-  padding: 0px 10px;
+  padding: 0px 30px;
   border-left: 1px solid lightgrey;
   background-color: white;
 }
