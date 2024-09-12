@@ -1,26 +1,105 @@
 import styles from './checkout.module.css'
-import { useContext } from 'react'  
+import { useContext, useEffect } from 'react';
+import { CartContext } from '../../components/Context/cartcontext.jsx'; 
 
 const Checkout = () => {
+  const { cartItems, updateQuantity, removeFromCart } = useContext(CartContext);
+  const calculateTotalPrice = () => {
+    let totalPrice = 0;
+    cartItems.forEach((item) => {
+      totalPrice += item.price * item.quantity; 
+    });
+    return totalPrice;
+  };
+
+
+
+
   return (
     <>
     <div >
 
   
     <div className={styles.checkout_summary}>
-
-        <div className={styles.checkout_summary_item}>
-
-        </div>
-
               <details>
-                <summary className={styles.checkout_summary_title}>SHOW ORDER SUMMARY</summary>
-                <ol>
-                <p>Product name</p>
-                <p>Price</p>
-                </ol>
-              </details>
+                <summary >
+                  <h3 className={styles.checkout_summary_title}> ► SHOW ORDER SUMMARY</h3>
+                  <p>{calculateTotalPrice()} SEK</p>
+                </summary>
+  {/*               <div className={styles.checkout_summary_items}>
+                  {cartItems.map((item, index) => (
+                    <div key={index} className={styles.checkout_summary_item}>
+                      <img 
+                        src={`/Images/${item.img[0]}`} 
+                        alt={item.name} 
+                        className={styles.checkout_summary_image} 
+                      />
+                      <p>{item.name}</p>
+                      <p>{item.price} SEK</p>
+                      <p>Quantity: {item.quantity}</p>
+                    </div>
+                  ))}
+                </div> */}
 
+<div className={styles.cart_items}>
+            {cartItems.map((item, index) => (
+              <div key={index} className={styles.cart_item}>
+                <img 
+                  src={`/Images/${item.img[0]}`} 
+                  alt={item.name} 
+                  className={styles.image} 
+                />
+
+                <div className={styles.info_container}>
+                  <section className={styles.name_price}>
+                    <p>{item.name}</p>
+                    <p>{item.price} SEK</p>
+                  </section>
+
+                  <section className={styles.quantity_size}>
+                    <section className={styles.quantity}>
+                      <p 
+                        className={styles.quantity_symbols} 
+                        onClick={() => updateQuantity(item.id, -1)}
+                      > 
+                        - 
+                      </p>
+                      <p className={styles.quantity_symbols}>{item.quantity}</p>
+                      <p 
+                        className={styles.quantity_symbols} 
+                        onClick={() => updateQuantity(item.id, 1)}
+                      > 
+                        + 
+                      </p>
+                    </section>
+
+                    <section className={styles.size}>
+                      <p>SIZE:</p>
+                      <select 
+                        name="size" 
+                        className={styles.size_select} 
+                        value={item.size}
+                        // Update size if needed, though it is not currently implemented in the CartContext
+                        onChange={(e) => console.log('Size change not yet implemented')}
+                      >
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                      </select>
+                    </section>
+                  </section>
+                </div>
+              </div>
+            ))}
+          </div>
+
+      
+          <section className={styles.totalprice}>
+            <p><strong>TOTAL</strong> incl. VAT & Duties</p>
+            <p>{calculateTotalPrice()} SEK</p>
+          </section>
+   
+              </details>
         </div>
 
 
