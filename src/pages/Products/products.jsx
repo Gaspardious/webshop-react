@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "../../components/Card/card.jsx"
 import productsDatabase from "../../data.js"
-import styles from './products.module.css'
+import styles from './products.module.scss'
 
 
 export default function Products ({ limit }) {

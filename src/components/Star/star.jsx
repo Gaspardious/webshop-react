@@ -1,5 +1,5 @@
 
-import styles from './star.module.css'  
+import styles from './star.module.scss'  
 import React, { useState } from 'react';
 const starEmpty = "/Images/heart.png"
 const starFilled = "/Images/heart_filled.png"

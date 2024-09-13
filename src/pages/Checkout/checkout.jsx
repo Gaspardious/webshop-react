@@ -1,4 +1,4 @@
-import styles from './checkout.module.css'
+import styles from './checkout.module.scss'
 import { useContext, useEffect } from 'react';
 import { CartContext } from '../../components/Context/cartcontext.jsx'; 
 

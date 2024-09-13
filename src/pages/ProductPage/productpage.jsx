@@ -1,4 +1,4 @@
-import styles from './productpage.module.css';
+import styles from './productpage.module.scss';
 import productsDatabase from '../../data';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import Card from '../../components/Card/card';

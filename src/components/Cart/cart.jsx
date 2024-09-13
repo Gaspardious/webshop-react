@@ -1,4 +1,4 @@
-import styles from './cart.module.css'
+import styles from './cart.module.scss'
 import { useContext, useEffect } from 'react';
 import { CartContext } from '../../components/Context/cartcontext.jsx'; // NY
 import { Link } from 'react-router-dom';

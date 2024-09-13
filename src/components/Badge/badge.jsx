@@ -1,4 +1,4 @@
-import styles from './badge.module.css'
+import styles from './badge.module.scss'
 import React from 'react'
 
 const Badge = ({ inventory }) => {

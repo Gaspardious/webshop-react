@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useParams, Link } from 'react-router-dom';
-import styles from './breadcrumbs.module.css';
+import styles from './breadcrumbs.module.scss';
 import productsDatabase from '../../data';
 
 const Breadcrumbs = () => {

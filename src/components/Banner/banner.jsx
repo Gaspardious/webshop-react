@@ -1,4 +1,4 @@
-import styles from './banner.module.css'
+import styles from './banner.module.scss'
 import { Link } from 'react-router-dom'
 
 const Banner = () => {

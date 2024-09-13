@@ -1,5 +1,5 @@
 import Star from '../Star/star';
-import styles from './card.module.css'
+import styles from './card.module.scss'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 

@@ -1,0 +1,48 @@
+// Define a mixin for the common box styles
+@mixin box-styles($background-color) {
+    background-color: $background-color;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    font-size: 1.2rem;
+  
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .faq_section {
+    flex: 1 1 30%;
+  }
+  
+  // Applying the mixin for each section with different colors
+  .faq_shipping {
+    @include box-styles(#f2f8ff); // Light blue
+  }
+  
+  .faq_returns {
+    @include box-styles(#fef4e5); // Light orange/yellow
+  }
+  
+  .faq_terms {
+    @include box-styles(#eaf9e0); // Light green
+  }
+  

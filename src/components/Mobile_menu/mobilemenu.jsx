@@ -1,4 +1,4 @@
-import styles from './mobilemenu.module.css';
+import styles from './mobilemenu.module.scss';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -40,9 +40,9 @@ const Mobilemenu = ({ isMenuOpen, setMenuOpen }) => {
         </ul>
     <hr className={styles.line} />
         <ul>
-          <li className={styles.under_menu}><Link to="/" onClick={() => setMenuOpen(false)}>SHIPPING</Link></li>
-          <li className={styles.under_menu}><Link to="/" onClick={() => setMenuOpen(false)}>RETURNS</Link></li>
-          <li className={styles.under_menu}><Link to="/" onClick={() => setMenuOpen(false)}>TERMS</Link></li>
+          <li className={styles.under_menu}><Link to="/faq" onClick={() => setMenuOpen(false)}>SHIPPING</Link></li>
+          <li className={styles.under_menu}><Link to="/faq" onClick={() => setMenuOpen(false)}>RETURNS</Link></li>
+          <li className={styles.under_menu}><Link to="/faq" onClick={() => setMenuOpen(false)}>TERMS</Link></li>
         </ul>
      <hr className={styles.line} />
         <ol className={styles.social}>
