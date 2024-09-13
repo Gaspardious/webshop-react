@@ -39,7 +39,7 @@ const Cart = ({ isCartOpen, setCartOpen }) => {
         <h2 className={styles.cart_title}>SHOPPING BAG</h2>
 
         {cartItems.length === 0 ? (
-          <p className={styles.empty_bag}>Your shopping bag is empty... 🛍️</p>
+          <p className={styles.empty_bag}>Your shopping bag is empty... 🛍️ </p>
 
         ) : (
           <div className={styles.cart_items}>
