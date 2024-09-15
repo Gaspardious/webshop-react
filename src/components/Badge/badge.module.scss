@@ -1,10 +1,12 @@
+@import "../../styles/variables.scss";
+
 .product__badge {
     position: absolute;
     top: 35px;
     left: 5px;
     border: none;
-    background-color: var(--mainColor);
-    color: var(--textColorTwo);
+    background-color: $bannerColor;
+    color: $textColorTwo;
     padding: 5px 7px;
     border-radius: 2px;
     font-weight: bold;

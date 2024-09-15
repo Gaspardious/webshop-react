@@ -1,0 +1,19 @@
+
+// _mixins.scss
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+@mixin buttons {
+    background-color: $mainColor;
+    padding: 7px;
+    border-radius: 5px;
+    list-style-type: none;
+    width: 110px;
+    text-align: center;
+    border: 0.5px solid $textColorTwo;
+    }
+
+    

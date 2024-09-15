@@ -1,6 +1,7 @@
+@import "../../styles/variables.scss";
 
 .header {
-    background: var(--mainColor);
+    background-color: $textColorOne;
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -22,7 +23,7 @@
     top: 10px;
     right: -5px;
     background-color: black;
-    color: var(--textColorOne);
+    color: $textColorOne;
     font-size: 8px;
     font-weight: bold;
     padding: 2px 6px;
@@ -63,8 +64,8 @@ ul {
 
 a {
     text-decoration: none;
-    color: var(--textColorOne);
-    font-family: var(--titleFont);
+    color: $textColorOne;
+    font-family: $titleFont;
     font-size: 18px;
     font-weight: 800;
     transition: 0.4s;
@@ -73,22 +74,22 @@ a {
 
 .logo1 {
     transition: 0.4s;
-    font-family: var(--titleFont);
+    font-family: $titleFont;
     width: 50px;
     font-size: 9.5px;
     padding-left: 22px;
     letter-spacing: 8px;
     margin-bottom: -2px;
-    color: var(--textColorTwo);
+    color: $textColorTwo;
 }
 
 .logo2 {
     transition: 0.4s;
-    font-family: var(--titleFont);
+    font-family: $titleFont;
     width: 50px;
     font-size: 21px;
     padding-left: 20px;
-    color: var(--textColorTwo);
+    color: $textColorTwo;
 }
 
 

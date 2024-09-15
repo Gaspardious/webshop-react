@@ -5,6 +5,7 @@ import Mobilemenu from '../Mobile_menu/mobilemenu';
 import Cart from '../Cart/cart';
 import { CartContext } from '../../components/Context/cartcontext';
 
+
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isCartOpen, setCartOpen] = useState(false);
@@ -13,6 +14,7 @@ export default function Header() {
 
   useEffect(() => {
     function handleScroll() {
+      const rootStyles = getComputedStyle(document.documentElement); // Get CSS variables from root element in _variables.scss
       const header = document.getElementsByClassName(styles.header)[0];
       const navLinks = document.querySelectorAll(`.${styles.nav_ul} a`);
       const logo1 = document.getElementsByClassName(styles.logo1)[0];
@@ -29,8 +31,8 @@ export default function Header() {
         header.style.height = "45px";
         header.style.background = "rgba(0, 0, 0, 0.5)";
         header.style.borderBottom = "none";
-        logo1.style.color = "white";
-        logo2.style.color = "white";
+        logo1.style.color = rootStyles.getPropertyValue('--textColorOne');
+        logo2.style.color = rootStyles.getPropertyValue('--textColorOne');
         menu.style.display = "block";
         menuBlack.style.display = "none";
         cart.style.display = "block";
@@ -38,17 +40,15 @@ export default function Header() {
         heart.style.display = "block";
         heart_black.style.display = "none";
 
-
-
  /*        navLinks.forEach((link) => {
           link.style.fontSize = "14px";
         }); */
       } else {
         header.style.height = "60px";
-        header.style.background = "var(--mainColor)";
+        header.style.background = rootStyles.getPropertyValue('--textColorOne');
         header.style.borderBottom = "0.5px solid white";
-        logo1.style.color = "black";
-        logo2.style.color = "black";
+        logo1.style.color = rootStyles.getPropertyValue('--textColorTwo');
+        logo2.style.color = rootStyles.getPropertyValue('--textColorTwo');
         menu.style.display = "none";
         menuBlack.style.display = "block";
         cart.style.display = "none";

@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .banner_section {
     padding-top:60px;
     transition: 0.4s;
@@ -6,7 +8,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: var(--bannerColor);
+    background-color: $bannerColor;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -17,7 +19,7 @@
 .banner, .middle_banner {
     padding: 5px;
     font-size: 10px;
-    color: var(--textColorTwo);
+    color: $textColorTwo;
     transition: 0.4s;
     font-weight: 500;
 }

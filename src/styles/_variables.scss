@@ -1,0 +1,27 @@
+// Define SCSS variables (for use in SCSS files only)
+$gray: rgb(80, 80, 80);
+$mainColor: rgb(241, 241, 241);
+$bannerColor: rgb(208, 208, 208);
+$bgColorCard: rgb(231, 231, 231);
+$bg-color: #f4f4f4;
+$textColorOne: white;
+$textColorTwo: rgb(59, 59, 59);
+
+// Fonts (SCSS variables)
+$titleFont: 'Fjalla One', sans-serif;
+$bodyFont: 'Nunito Sans', sans-serif;
+
+// Define CSS variables (for use in both SCSS and JavaScript)
+:root {
+  --gray: #505050;
+  --mainColor: #f1f1f1;
+  --bannerColor: #d0d0d0;
+  --bgColorCard: #e7e7e7;
+  --bg-color: #f4f4f4;
+  --textColorOne: #ffffff;
+  --textColorTwo: #3b3b3b;
+
+  // Fonts as CSS variables
+  --titleFont: 'Fjalla One', sans-serif;
+  --bodyFont: 'Nunito Sans', sans-serif;
+}

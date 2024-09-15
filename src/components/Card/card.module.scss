@@ -1,10 +1,13 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
 
 .card {
-    background-color: var(--bgColorCard);
+    background-color: $bgColorCard;
     width: 320px;
     height: 420px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 2px var(--bgColorCard);
+    box-shadow: 0px 0px 10px 2px $bgColorCard;
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -18,10 +21,6 @@
     border-radius: 10px 10px 0px 0px;
     transition: transform 0.3s ease-in-out;
     height: auto; /* Adjust height as necessary */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .shrink {
@@ -39,46 +38,33 @@
 .product__company {
     font-size: 8px;
     padding-left: 10px;
-    font-family: var(--bodyFont);
-     color: var(--textColorTwo);
+    font-family: $bodyFont;
+     color: $textColorTwo;
      margin-bottom: 20px;
      pointer-events: none;
-     -webkit-user-select: none;
-     -moz-user-select: none;
-     -ms-user-select: none;
-     user-select: none;
 }
 
 
 .product__info {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     flex-direction: column;
-    align-items: center;
+
 }
 
 .product__name {
     font-size: 20px;
     padding: 5px;
-    font-family: var(--titleFont);
-    color: var(--textColorTwo);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    font-family: $titleFont;
+    color: $textColorTwo;
     
 }
 
 .product__price {
     font-size: 13px;
     font-weight: 100;
-    color: var(--textColorTwo);
-    font-family: var(--bodyFont);
+    color: $textColorTwo;
+    font-family: $bodyFont;
     pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .product__section {
@@ -86,21 +72,21 @@
 }
 
 .product__button {
-    background: var(--textColorOne);
+    background: $textColorOne;
     border: none;
     border-radius: 10px;
     width: 200px;
     height: 30px;
     margin: 10px 0px;
-    font-family: var(--titleFont);
-    color: var(--textColorTwo);
+    font-family: $titleFont;
+    color:  $textColorTwo;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .product__button:hover {
-    background: var(--textColorTwo);
-    color: var(--textColorOne);
+    background: $textColorTwo;
+    color: $textColorOne;
     transform: scale(1.05);
 }
 
@@ -127,8 +113,8 @@
     .product__company {
         font-size: 7px;
         padding-left: 4px;
-        font-family: var(--bodyFont);
-         color: var(--textColorTwo);
+        font-family: $bodyFont;
+         color: $textColorTwo;
          margin-bottom: 20px;
     }
 
@@ -137,7 +123,7 @@
         height: 30px;
         margin: 5px;
         padding: 0;
-        font-family: var(--titleFont);
+        font-family: $titleFont;
     }
     
     .product__price {
@@ -146,7 +132,7 @@
     .product__badge {
         font-size: 5.5px;
         font-weight: 700;
-        color: var(--textColorOne);
+        color: $textColorOne;
     }
 
     .product__size {
@@ -174,8 +160,8 @@
        .product__company {
         font-size: 7px;
         padding-left: 4px;
-        font-family: var(--bodyFont);
-         color: var(--textColorTwo);
+        font-family: $bodyFont;
+         color: $textColorTwo;
          margin-bottom: 20px;
     }
 
@@ -189,7 +175,7 @@
     .product__price {
         font-size: 13px;
         font-weight: 100;
-        font-family: var(--bodyFont);
+        font-family: $bodyFont;
     }
     .product__badge {
         display: none;
