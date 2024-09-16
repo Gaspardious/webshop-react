@@ -1,12 +1,12 @@
 import styles from './faq.module.scss';
 import React from 'react';
 
+
 const Faq = () => {
   return (
     <>
       <div>
         <h1 className={styles.heading}>FAQ</h1>
-
         <div className={styles.container}>
           <section className={`${styles.faq_section} ${styles.faq_shipping}`}>
 
