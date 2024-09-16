@@ -1,4 +1,6 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
 
 .banner_section {
     padding-top:60px;
@@ -9,11 +11,8 @@
     justify-content: space-evenly;
     align-items: center;
     background-color: $bannerColor;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     min-height: 30px;
+    @include color_animation;
 }
 
 .banner, .middle_banner {
@@ -21,7 +20,7 @@
     font-size: 10px;
     color: $textColorTwo;
     transition: 0.4s;
-    font-weight: 500;
+    font-weight: 600;
 }
     .ig_logo {
         width: 19px;

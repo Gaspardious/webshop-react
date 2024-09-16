@@ -9,7 +9,6 @@ const Faq = () => {
         <h1 className={styles.heading}>FAQ</h1>
         <div className={styles.container}>
           <section className={`${styles.faq_section} ${styles.faq_shipping}`}>
-
             <h2 className={styles.faq_heading}>SHIPPING</h2>
             <div className={styles.faq_question}>
               <h3 className={styles.faq_question_heading}>How long does shipping take?</h3>
