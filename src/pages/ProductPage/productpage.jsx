@@ -13,6 +13,8 @@ function ProductPage({ limit }) {
   const limitProducts = productsDatabase.slice(0, 4);
   const { addToCart } = useContext(CartContext); //NY
   const location = useLocation();
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   useEffect(() => {
     const foundProduct = productsDatabase.find((product) => product.id === id);
@@ -36,6 +38,45 @@ function ProductPage({ limit }) {
   if (!product) {
     return <h2>Product not found</h2>;
   }
+
+
+  // Swipe functionality
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStart - touchEnd > 50) {
+      // Swiped left, move to the next image
+      nextImage();
+    }
+
+    if (touchStart - touchEnd < -50) {
+      // Swiped right, move to the previous image
+      prevImage();
+    }
+  };
+
+  const nextImage = () => {
+    const currentIndex = product.img.indexOf(currentImage);
+    const nextIndex = (currentIndex + 1) % product.img.length;
+    setCurrentImage(product.img[nextIndex]);
+  };
+
+  const prevImage = () => {
+    const currentIndex = product.img.indexOf(currentImage);
+    const prevIndex = (currentIndex - 1 + product.img.length) % product.img.length;
+    setCurrentImage(product.img[prevIndex]);
+  };
+
+  if (!product) {
+    return <h2>Product not found</h2>;
+  }
+
 
   return (
     <div className={styles.productpage}>
