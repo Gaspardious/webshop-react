@@ -13,8 +13,13 @@ function ProductPage({ limit }) {
   const limitProducts = productsDatabase.slice(0, 4);
   const { addToCart } = useContext(CartContext); //NY
   const location = useLocation();
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
+  
+  // For swipe gestures
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
+  
+  // For mouse drag gestures
+  const [mouseStartX, setMouseStartX] = useState(0);
 
   useEffect(() => {
     const foundProduct = productsDatabase.find((product) => product.id === id);
@@ -26,7 +31,6 @@ function ProductPage({ limit }) {
     }
   }, [id]);
 
-
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -35,28 +39,37 @@ function ProductPage({ limit }) {
     });
   }, [location]);
 
-  if (!product) {
-    return <h2>Product not found</h2>;
-  }
-
-
-  // Swipe functionality
+  // Handle swipe gesture on touch devices
   const handleTouchStart = (e) => {
-    setTouchStart(e.targetTouches[0].clientX);
+    setTouchStartX(e.targetTouches[0].clientX);
   };
 
   const handleTouchMove = (e) => {
-    setTouchEnd(e.targetTouches[0].clientX);
+    setTouchEndX(e.targetTouches[0].clientX);
   };
 
   const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 50) {
-      // Swiped left, move to the next image
+    if (touchStartX - touchEndX > 50) {
+      // Swiped left
       nextImage();
+    } else if (touchStartX - touchEndX < -50) {
+      // Swiped right
+      prevImage();
     }
+  };
 
-    if (touchStart - touchEnd < -50) {
-      // Swiped right, move to the previous image
+  // Handle swipe gesture on desktop with mouse
+  const handleMouseDown = (e) => {
+    setMouseStartX(e.clientX);
+  };
+
+  const handleMouseUp = (e) => {
+    const mouseEndX = e.clientX;
+    if (mouseStartX - mouseEndX > 50) {
+      // Swiped left
+      nextImage();
+    } else if (mouseStartX - mouseEndX < -50) {
+      // Swiped right
       prevImage();
     }
   };
@@ -77,11 +90,17 @@ function ProductPage({ limit }) {
     return <h2>Product not found</h2>;
   }
 
-
   return (
     <div className={styles.productpage}>
       <div className={styles.product}>
-        <div className={styles.gallary}>
+        <div 
+          className={styles.gallary}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+        >
           <div className={styles.product_img_badge}>
             <img
               src={`../Images/${currentImage}`}
