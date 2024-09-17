@@ -18,8 +18,6 @@ function ProductPage({ limit }) {
   const [touchStartX, setTouchStartX] = useState(0);
   const [touchEndX, setTouchEndX] = useState(0);
   
-  // For mouse drag gestures
-  const [mouseStartX, setMouseStartX] = useState(0);
 
   useEffect(() => {
     const foundProduct = productsDatabase.find((product) => product.id === id);
@@ -42,10 +40,12 @@ function ProductPage({ limit }) {
   // Handle swipe gesture on touch devices
   const handleTouchStart = (e) => {
     setTouchStartX(e.targetTouches[0].clientX);
+    e.preventDefault();
   };
 
   const handleTouchMove = (e) => {
     setTouchEndX(e.targetTouches[0].clientX);
+    e.preventDefault();
   };
 
   const handleTouchEnd = () => {
@@ -53,22 +53,6 @@ function ProductPage({ limit }) {
       // Swiped left
       nextImage();
     } else if (touchStartX - touchEndX < -50) {
-      // Swiped right
-      prevImage();
-    }
-  };
-
-  // Handle swipe gesture on desktop with mouse
-  const handleMouseDown = (e) => {
-    setMouseStartX(e.clientX);
-  };
-
-  const handleMouseUp = (e) => {
-    const mouseEndX = e.clientX;
-    if (mouseStartX - mouseEndX > 50) {
-      // Swiped left
-      nextImage();
-    } else if (mouseStartX - mouseEndX < -50) {
       // Swiped right
       prevImage();
     }
@@ -98,8 +82,6 @@ function ProductPage({ limit }) {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          onMouseDown={handleMouseDown}
-          onMouseUp={handleMouseUp}
         >
           <div className={styles.product_img_badge}>
             <img
