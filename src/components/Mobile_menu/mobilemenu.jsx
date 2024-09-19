@@ -41,8 +41,9 @@ const Mobilemenu = ({ isMenuOpen, setMenuOpen }) => {
     <hr className={styles.line} />
         <ul>
           <li className={styles.under_menu}><Link to="/faq" onClick={() => setMenuOpen(false)}>SHIPPING</Link></li>
-          <li className={styles.under_menu}><Link to="/faq" onClick={() => setMenuOpen(false)}>RETURNS</Link></li>
-          <li className={styles.under_menu}><Link to="/faq" onClick={() => setMenuOpen(false)}>TERMS</Link></li>
+          <li className={styles.under_menu}><Link to="/faq" onClick={() => setMenuOpen(false)}>RETURNS & REFUNDS</Link></li>
+          <li className={styles.under_menu}><Link to="/privacypolicy" onClick={() => setMenuOpen(false)}>PRIVACY POLICY</Link></li>
+          <li className={styles.under_menu}><Link to="/terms" onClick={() => setMenuOpen(false)}>TERMS & CONDITIONS</Link></li>
         </ul>
      <hr className={styles.line} />
         <ol className={styles.social}>

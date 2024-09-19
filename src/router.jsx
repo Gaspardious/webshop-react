@@ -9,6 +9,8 @@ import Homepage from "./pages/Homepage/homepage";
 import Contact from "./pages/Contact/contact";
 import Checkout from "./pages/Checkout/checkout";
 import Faq from "./pages/FAQ/faq";
+import Privacypolicy from "./pages/PrivacyPolicy/privacypolicy";
+import Terms from "./pages/Terms/terms";
 
 
 
@@ -26,6 +28,8 @@ const router = createBrowserRouter ([
   { path: 'product/:id', element: <ProductPage />},
   { path: 'checkout', element: <Checkout />},
   { path: 'faq', element: <Faq />},
+  { path: 'privacypolicy', element: <Privacypolicy />},
+  { path: 'terms', element: <Terms />},
 ]
 },
 ]);

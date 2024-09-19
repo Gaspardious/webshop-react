@@ -33,15 +33,16 @@
   color: var(--textColorTwo); 
   text-decoration: none;
   transition: color 0.1s ease;
-  font-size: 22px;
-  font-family: var(--titleFont);
+  font-size: 15px;
+  font-family: var(--bodyFont);
 }
+
 .mobileNav > ul > .under_menu > a {
   color: var(--textColorTwo); 
   text-decoration: none;
   transition: color 0.1s ease;
-  font-size: 18px;
-  font-family: var(--titleFont);
+  font-size: 10px;
+  font-family: var(--bodyFont);
   font-weight: 100;
 }
 
@@ -81,7 +82,7 @@
 .line {
   width: 70%;
   height: 0.1px;
-  color: lightgray;
+  color: rgba(255, 255, 255, 0.257);
 }
 
 .social {
@@ -92,7 +93,7 @@
 }
 
 .social_logo {
-  width: 25px;
+  width: 20px;
 }
 
 

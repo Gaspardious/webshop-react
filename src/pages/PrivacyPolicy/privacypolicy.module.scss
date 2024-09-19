@@ -1,0 +1,60 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.privacyPolicy {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.privacyPolicy h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.privacyPolicy h2 {
+  margin-top: 20px;
+}
+.privacyPolicy h3 {
+  margin-top: 40px;
+}
+
+.privacyPolicy p {
+  margin-top: 10px;
+}
+
+.privacyPolicy ul {
+  margin-top: 10px;
+}
+
+.privacyPolicy li {
+  margin-top: 5px;
+  font-size: 10px;
+  width: 25%;
+  background-color: #efefef;
+    padding: 5px;
+    border-radius: 5px;
+  
+}
+
+.privacyPolicy a {
+  color: #1e2f42;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.privacyPolicy a:hover {
+  text-decoration: underline;
+}
+
+.privacyPolicy .terms_section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  margin: 10px;
+  text-align: left;
+}
