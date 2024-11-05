@@ -4,6 +4,7 @@ import styles from './header.module.scss';
 import Mobilemenu from '../Mobile_menu/mobilemenu';
 import Cart from '../Cart/cart';
 import { CartContext } from '../../components/Context/cartcontext';
+import { motion } from 'framer-motion';
 
 
 export default function Header() {
@@ -11,6 +12,15 @@ export default function Header() {
   const [isCartOpen, setCartOpen] = useState(false);
   const { cartItems } = useContext(CartContext); 
   const totalItemsInCart = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+  const [cartCountChanged, setCartCountChanged] = useState(false);
+
+  useEffect(() => {
+    if (totalItemsInCart > 0) {
+      setCartCountChanged(true); // Trigger the animation
+      setTimeout(() => setCartCountChanged(false), 500); // Reset animation state after 500ms
+    }
+  }, [totalItemsInCart]);
+
 
   useEffect(() => {
     function handleScroll() {
@@ -96,12 +106,19 @@ export default function Header() {
           <img src="/Images/heart-black.png" className={styles.heart_black} />
 
           {/* Cart icon with number ticker */}
-          <div className={styles.cart_container} onClick={() => setCartOpen(!isCartOpen)}>
+          <motion.div
+            className={styles.cart_container}
+            onClick={() => setCartOpen(!isCartOpen)}
+            animate={{
+              rotate: cartCountChanged ? [0, 15, -15, 10, -10, 5, -5, 0] : 0,
+            }}
+            transition={{ duration: 0.5 }}
+          >
             <img
               src="/Images/shopping-bag-white.png"
               alt="cart"
               className={styles.cart}
-            />
+              />
             <img
               src="/Images/shopping-bag-black.png"
               alt="cart"
@@ -109,9 +126,11 @@ export default function Header() {
             />
             {/* Display number of items in cart if greater than 0 */}
             {totalItemsInCart > 0 && (
-              <span className={styles.cart_count}>{totalItemsInCart}</span>
+              <span 
+              className={styles.cart_count}
+              >{totalItemsInCart}</span>
             )}
-          </div>
+          </motion.div>
         </div>
       </header>
 
