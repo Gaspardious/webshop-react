@@ -72,23 +72,24 @@ export default function Homepage () {
 
          <section className={styles.hero_image1}>
             <Link to="/product/5">
-                <img className={styles.hero_lifestyle_img} src="/Images/gustav_lifestyle.png" alt="Black and White sweater lifestyle image" />  
+                <img className={styles.hero_img_copper} src="/Images/gustav_lifestyle.png" alt="Black and White sweater lifestyle image" />  
                 <h2 className={styles.hero_image_title}>COPPER</h2>
             </Link>
          </section>
 
-         <Link to="/product/2">
+
          <section className={styles.hero_image1}>
+            <Link to="/product/2">
                 <img className={styles.hero_lifestyle_img} src="/Images/gota_lifestyle1.png" alt="Black sweater lifestyle image" />  
-                <h2 className={styles.hero_image_title}>BLACK SWEATER <img className={styles.hero_image_arrow} src="/Images/arrow.png" alt="" /> SHOP NOW </h2>
-                <h2 className={styles.hero_image_title}></h2>
+                <h2 className={styles.hero_image_title}>BLACK SWEATER</h2>
+            </Link>
          </section>
-         </Link>
+       
 
         </div>
 
         <div className={styles.hero_products}>
-            <Products limit={3} />
+            <Products limit={2} />
             <a className={styles.btn}><Link to="/products">SEE ALL PRODUCTS</Link></a>
         </div>
 
